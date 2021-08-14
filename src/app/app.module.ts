@@ -3,10 +3,44 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AdminComponent } from './admin/admin.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AdminCategoryComponent } from './admin/admin-category/admin-category.component';
+import { AdminOrderComponent } from './admin/admin-order/admin-order.component';
+import { AdminProductComponent } from './admin/admin-product/admin-product.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
+import { HitsComponent } from './pages/hits/hits.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ProNasComponent } from './pages/pro-nas/pro-nas.component';
+import { ProductCategoryComponent } from './pages/product-category/product-category.component';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { PromotionsComponent } from './pages/promotions/promotions.component';
+import { SertifikatiComponent } from './pages/sertifikati/sertifikati.component';
+import { VidgukiComponent } from './pages/vidguki/vidguki.component';
+import { YakZamovitiComponent } from './pages/yak-zamoviti/yak-zamoviti.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AdminComponent,
+    HeaderComponent,
+    FooterComponent,
+    AdminCategoryComponent,
+    AdminOrderComponent,
+    AdminProductComponent,
+    CartComponent,
+    ContactsComponent,
+    HitsComponent,
+    HomeComponent,
+    ProNasComponent,
+    ProductCategoryComponent,
+    ProductDetailsComponent,
+    PromotionsComponent,
+    SertifikatiComponent,
+    VidgukiComponent,
+    YakZamovitiComponent,
   ],
   imports: [
     BrowserModule,
