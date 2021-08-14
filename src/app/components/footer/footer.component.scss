@@ -37,6 +37,85 @@ a {
 }
 
 .info a {
-    color: #337ab7;
-    text-decoration: underline;
+  color: #337ab7;
+  text-decoration: underline;
+}
+
+.menu {
+  margin: 0 15px;
+
+  li {
+    height: 35px;
+    padding: 5px 0;
+  }
+
+  h3 {
+    width: 130px;
+    height: 28px;
+    font-size: 18px;
+    border-bottom: 3px solid #11c459;
+    padding-bottom: 6px;
+    margin: 20px 0 10px;
+  }
+}
+
+.about {
+  margin: 0 15px;
+  width: 212.5px;
+
+  li {
+    height: 35px;
+    padding: 5px 0;
+  }
+
+  h3 {
+    width: 130px;
+    height: 28px;
+    font-size: 18px;
+    border-bottom: 3px solid #fe4c2b;
+    padding-bottom: 6px;
+    margin: 20px 0 10px;
+  }
+}
+
+.contacts {
+  h3 {
+    width: 240px;
+    height: 28px;
+    font-size: 18px;
+    border-bottom: 3px solid #fe4c2b;
+    padding-bottom: 6px;
+    margin: 20px 0 10px;
+  }
+
+  a {
+    height: 32px;
+    font-size: 19px;
+  }
+}
+
+hr {
+  border-color: #ff1411;
+  width: 212.5px;
+  margin: 13px 0 18px ;
+}
+
+.info {
+  width: 131.66px;
+  margin: 0 15px 0 176.6px;
+
+  p {
+    height: 18px;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    height: 35px;
+    font-size: 15px;
+  }
+
+  img {
+    margin-bottom: 15px;
+  }
 }
