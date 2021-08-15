@@ -1,0 +1,146 @@
+.sertif {
+    width: 900px;
+    margin: 30px auto 30px;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 6fr;
+}
+
+.photo1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.photo2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.photo3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.photo4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.photo5 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.photo6 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.photo7 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.photo8 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.photo9 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+.photo10 {
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+
+.photo11 {
+    grid-column: 1/2;
+    grid-row: 6/7;
+}
+
+.photo12 {
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
+
+h1 {
+    padding-top: 20px;
+    padding-bottom: 2px;
+    border-bottom: 5px solid #fe4c2b;
+    width: 185.41px;
+    font-size: 30px;
+    margin: 20px auto 10px;
+}
+
+
+@media (max-width: 1200px) {
+    .sertif {
+        width: 450px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 12fr;
+    }
+
+    .photo1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+    .photo2 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    .photo3 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    
+    .photo4 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    
+    .photo5 {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    
+    .photo6 {
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+    
+    .photo7 {
+        grid-column: 1/2;
+        grid-row: 7/8;
+    }
+    
+    .photo8 {
+        grid-column: 1/2;
+        grid-row: 8/9;
+    }
+    
+    .photo9 {
+        grid-column: 1/2;
+        grid-row: 9/10;
+    }
+    
+    .photo10 {
+        grid-column: 1/2;
+        grid-row: 10/11;
+    }
+    
+    .photo11 {
+        grid-column: 1/2;
+        grid-row: 11/12;
+    }
+    
+    .photo12 {
+        grid-column: 1/2;
+        grid-row: 12/13;
+    }
+}
