@@ -5,22 +5,38 @@
 
 h2 {
     width: 300px;
+    display: flex;
+    margin: 14px auto 19px;
+    justify-content: center;
+    
+}
+
+span {
+    width: 112px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.num {
+    font-size: 50px;
+    width: 36.41px;
 }
 
 .howToOrder {
     display: grid;
     grid-template-columns: 4fr;
-    text-align: center;
+    margin: 54px 0 43px;
 
     p {
         border: 1px solid #bebebe;
         border-top: 4px solid #11c459;
         height: 100%;
         line-height: 22px;
-        margin: auto;
         height: 164px;
         width: 270px;
         padding: 15px 5px 5px;
+        margin: 0 auto;
+        font-size: 18px;
     }
 }
 
@@ -41,14 +57,19 @@ h2 {
 }
 
 h1 {
-    padding-top: 20px;
     padding-bottom: 2px;
+    margin: 40px auto;
     border-bottom: 5px solid #fe4c2b;
-    margin: auto;
     font-size: 30px;
     width: 198px;
 }
 
 p {
     text-align: center;
+    margin-bottom: 40px;
+    font-size: 22px;
+}
+
+img {
+    margin: 0 80px;
 }
