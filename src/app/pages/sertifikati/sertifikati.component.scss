@@ -1,5 +1,10 @@
-.sertif {
+.site-content {
+    margin: auto;
     width: 900px;
+}
+
+.sertif {
+    width: 100%;
     margin: 30px auto 30px;
     display: grid;
     grid-template-columns: 2fr;
@@ -77,8 +82,12 @@ h1 {
 
 
 @media (max-width: 1200px) {
-    .sertif {
+    .site-content {
+        margin: auto;
         width: 450px;
+    }
+
+    .sertif {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 12fr;
