@@ -26,6 +26,7 @@ span {
     display: grid;
     grid-template-columns: 4fr;
     margin: 54px 0 43px;
+    position: relative;
 
     p {
         border: 1px solid #bebebe;
@@ -72,4 +73,22 @@ p {
 
 img {
     margin: 0 80px;
+}
+
+.arr1 {
+    position: absolute;
+    top: 40px;
+    left: 160px;
+}
+
+.arr2 {
+    position: absolute;
+    top: 40px;
+    left: 470px;
+}
+
+.arr3 {
+    position: absolute;
+    top: 40px;
+    right: 150px;
 }
