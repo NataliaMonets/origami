@@ -1,3 +1,5 @@
+@import '../../shared/style/fonts.scss';
+
 .site-content {
     width: 1200px;
     margin: auto;
@@ -15,11 +17,14 @@ span {
     width: 112px;
     font-size: 20px;
     text-align: left;
+    font-family: 'FuturaMediumC';
+    font-weight: 500;
 }
 
 .num {
     font-size: 50px;
     width: 36.41px;
+    font-family: 'FuturaMediumC';
 }
 
 .howToOrder {
@@ -38,6 +43,7 @@ span {
         padding: 15px 5px 5px;
         margin: 0 auto;
         font-size: 18px;
+        font-family: 'FuturaBookC';
     }
 }
 
@@ -63,12 +69,16 @@ h1 {
     border-bottom: 5px solid #fe4c2b;
     font-size: 30px;
     width: 198px;
+    font-family: 'FuturaMediumC';
+    font-weight: 500;
+    line-height: 1.1;
 }
 
 p {
     text-align: center;
     margin-bottom: 40px;
     font-size: 22px;
+    font-family: 'FuturaBookC';
 }
 
 img {

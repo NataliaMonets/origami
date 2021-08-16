@@ -1,3 +1,5 @@
+@import '../../shared/style/fonts.scss';
+
 .site-content {
     margin: auto;
     width: 945px;
@@ -15,6 +17,9 @@ h1 {
     margin: 20px auto 10px;
     font-size: 30px;
     width: 121.48px;
+    font-family: 'FuturaMediumC';
+    font-weight: 500;
+    line-height: 1.1;
 }
 
 a {
@@ -23,4 +28,5 @@ a {
 
 .article {
     margin: 30px 0;
+    font-family: 'FuturaBookC';
 }
