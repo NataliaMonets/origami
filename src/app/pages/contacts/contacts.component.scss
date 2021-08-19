@@ -1,32 +1,62 @@
+@import '../../shared/style/fonts.scss';
+
 .site-content {
   width: 970px;
-  margin: auto;
+  margin: 0 auto 67px;
+  font-family: 'FuturaBookC';
 }
 
 .contacts {
   display: flex;
   align-items: flex-start;
+  margin-top: 19px;
 
-  li {
-    list-style: none;
+  p {
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 0;
   }
+}
 
-  a {
-    color: black;
-    text-decoration: none;
-  }
+li {
+  list-style: none;
+  height: 32px;
+  padding: 4px;
+}
 
-  a:active {
-    color: red;
-  }
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 21px;
+}
 
-  a[tabindex]:focus {
-    color: red;
-    outline: none;
-  }
+a:active {
+  color: red;
+}
 
-  h1 {
-      margin: auto;
-      width: 143px;
-  }
+a[tabindex]:focus {
+  color: red;
+  outline: none;
+}
+
+h1 {
+  margin: auto;
+  width: 143px;
+  border-bottom: 5px solid #fe4c2b;
+  margin: 20px auto 40px;
+  font-size: 30px;
+  width: 142.69px;
+  font-family: 'FuturaMediumC';
+  font-weight: 500;
+  line-height: 1.1;
+  padding: 20px 0 2px;
+}
+
+p {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+img {
+  margin: 2px 15px 0 0;
 }
