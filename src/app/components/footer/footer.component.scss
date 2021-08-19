@@ -47,7 +47,8 @@ a {
 }
 
 .menu {
-  margin: 0 15px;
+  width: 195px;
+  padding: 0 15px;
 
   li {
     height: 35px;
@@ -69,7 +70,7 @@ a {
 
 .about {
   margin: 0 15px;
-  width: 212.5px;
+  width: 262.5px;
 
   li {
     height: 35px;
@@ -90,6 +91,9 @@ a {
 }
 
 .contacts {
+  padding: 0 15px;
+  width: 292.5px;
+
   h3 {
     width: 240px;
     height: 28px;
@@ -112,12 +116,12 @@ a {
 hr {
   border-color: #ff1411;
   width: 212.5px;
-  margin: 13px 0 18px ;
+  margin: 13px 0 18px;
 }
 
 .info {
   width: 165px;
-  margin: 0 15px 0 176.6px;
+  margin: 0 15px 0 210px;
 
   p {
     height: 18px;
