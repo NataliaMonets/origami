@@ -59,8 +59,17 @@ a[tabindex]:focus {
         height: 30px;
     }
 
+    li:hover {
+        background-color: rgb(235, 233, 233);
+        height: 30px;
+    }
+}
+
+.top-menu-search {
+    display: flex;
+
     img {
-        margin-top: 2px;
+        margin: 2px;
     }
 }
 
