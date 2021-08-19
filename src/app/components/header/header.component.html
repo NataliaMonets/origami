@@ -1,75 +1,97 @@
 <div class="header">
-    <div class="header-main">
-      <a [routerLink]="['']" class="origami-img">
-        <img src="https://origami.lviv.ua/_nuxt/f2f7469.png" alt="" [style.width]="'188px'">
-      </a>
-      <div class="top-header">
-        <div class="language">
-          <a [routerLink]="['']" tabindex="1">UA</a>
-          <a [routerLink]="['']" tabindex="1">RU</a>
-          <a [routerLink]="['']" tabindex="1">EN</a>
-        </div>
-        <div class="top-menu-search">
-          <ul class="top-menu">
-            <li>
-              <a tabindex="1" [routerLink]="['/pro-nas']" routerLinkActive="active">Про нас</a>
-            </li>
-            <li>
-              <a tabindex="1" [routerLink]="['/yak-zamoviti']" routerLinkActive="active">Як замовити</a>
-            </li>
-            <li>
-              <a tabindex="1" [routerLink]="['/sertifikati']" routerLinkActive="active">Сертифікати</a>
-            </li>
-            <li>
-              <a tabindex="1" [routerLink]="['/vidguki']" routerLinkActive="active">Відгуки</a>
-            </li>
-            <li>
-              <a tabindex="1" [routerLink]="['/promotions']" routerLinkActive="active">Акції</a>
-            </li>
-          </ul>
-        </div>
+  <div class="header-main">
+    <a [routerLink]="['']" class="origami-img">
+      <img src="https://origami.lviv.ua/_nuxt/f2f7469.png" alt="" [style.width]="'188px'">
+    </a>
+    <div class="top-header">
+      <div class="language">
+        <a [routerLink]="['']" tabindex="1">UA</a>
+        <a [routerLink]="['']" tabindex="1">RU</a>
+        <a [routerLink]="['']" tabindex="1">EN</a>
       </div>
-        <div class="middle-header">
-          <p>Безкоштовна доставка по Львову від 149 грн</p>
-          <div class="info">
-            <div class="phone">
-              <a href="tel:380969022555">+38(096)90-22-555</a>
-            </div>
-            <div class="shedule">10:00-02:00</div>
-          </div>
+      <div class="top-menu-search">
+        <ul class="top-menu">
+          <li>
+            <a tabindex="1" [routerLink]="['/pro-nas']" routerLinkActive="active">Про нас</a>
+          </li>
+          <li>
+            <a tabindex="1" [routerLink]="['/yak-zamoviti']" routerLinkActive="active">Як замовити</a>
+          </li>
+          <li>
+            <a tabindex="1" [routerLink]="['/sertifikati']" routerLinkActive="active">Сертифікати</a>
+          </li>
+          <li>
+            <a tabindex="1" [routerLink]="['/vidguki']" routerLinkActive="active">Відгуки</a>
+          </li>
+          <li>
+            <a tabindex="1" [routerLink]="['/promotions']" routerLinkActive="active">Акції</a>
+          </li>
+          <li>
+            <img src="../../../assets/images/search.svg" alt="" [style.width]="'14px'">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="middle-header">
+      <p>Безкоштовна доставка по Львову від 149 грн</p>
+      <div class="info">
+        <div class="phone">
+          <a href="tel:380969022555">+38(096)90-22-555</a>
         </div>
-        <div class="menu-header">
-          <ul class="menu">
-            <li>
-              <a [routerLink]="[ '/product-category', 'pizza' ]" routerLinkActive="active" class="nav-link" tabindex="1">Піца</a>
-            </li>
-            <li>
-              <a [routerLink]="[ '/product-category', 'rolls' ]" routerLinkActive="active" class="nav-link" tabindex="1">Роли</a>
-            </li>
-            <li>
-              <a [routerLink]="[ '/product-category', 'wok' ]" routerLinkActive="active" class="nav-link" tabindex="1">Wok</a>
-            </li>
-            <li>
-              <a [routerLink]="[ '/product-category', 'sets' ]" routerLinkActive="active" class="nav-link" tabindex="1">Суші сети</a>
-            </li>
-            <li>
-              <a [routerLink]="[ '/product-category', 'sushi' ]" routerLinkActive="active" class="nav-link" tabindex="1">Суші</a>
-            </li>
-            <li>
-              <a [routerLink]="[ '/product-category', 'soups-salads' ]" routerLinkActive="active" class="nav-link" tabindex="1">Супи,
-                салати
-              </a>
-            </li>
-            <li>
-              <a [routerLink]="[ '/product-category', 'desserts' ]" routerLinkActive="active" class="nav-link" tabindex="1">Десерти</a>
-            </li>
-            <li>
-              <a [routerLink]="[ '/product-category', 'drinks' ]" routerLinkActive="active" class="nav-link" tabindex="1">Напої</a>
-            </li>
-            <li>
-              <a [routerLink]="[ '/hits']" routerLinkActive="active" class="nav-link" tabindex="1">Хіти</a>
-            </li>
-          </ul>
-        </div>
+        <div class="shedule">
+          <i class="uis uis-clock-three" [style.fontSize]="'18px'"></i>
+          10:00-02:00</div>
+      </div>
+    </div>
+    <div class="menu-header">
+      <ul class="menu">
+        <li [routerLink]="[ '/product-category', 'pizza' ]">
+          <img src="../../../assets/images/pizza-slice.svg" alt="" [style.width]="'40px'" [style.margin]="'auto'"> 
+          <a routerLinkActive="active" class="nav-link"
+            tabindex="1">Піца</a>
+        </li>
+        <li [routerLink]="[ '/product-category', 'rolls' ]">
+          <img src="../../../assets/images/roll.svg" alt="" [style.width]="'30px'" [style.margin]="'auto'"> 
+          <a routerLinkActive="active" class="nav-link"
+            tabindex="1">Роли</a>
+        </li>
+        <li [routerLink]="[ '/product-category', 'wok' ]">
+          <img src="../../../assets/images/noodles.svg" alt="" [style.width]="'40px'" [style.margin]="'auto'">
+          <a routerLinkActive="active" class="nav-link"
+            tabindex="1">Wok</a>
+        </li>
+        <li [routerLink]="[ '/product-category', 'sets' ]">
+          <img src="../../../assets/images/sushi-set.svg" alt="" [style.width]="'40px'" [style.margin]="'auto'">
+          <a routerLinkActive="active" class="nav-link" tabindex="1">Суші
+            сети</a>
+        </li>
+        <li [routerLink]="[ '/product-category', 'sushi' ]">
+          <img src="../../../assets/images/sushi.svg" alt="" [style.width]="'40px'" [style.margin]="'auto'"> 
+          <a routerLinkActive="active" class="nav-link"
+            tabindex="1">Суші</a>
+        </li>
+        <li [routerLink]="[ '/product-category', 'soups-salads' ]">
+          <img src="../../../assets/images/bowl.svg" alt="" [style.width]="'40px'" [style.margin]="'auto'"> 
+          <a routerLinkActive="active" class="nav-link"
+            tabindex="1">Супи,
+            салати
+          </a>
+        </li>
+        <li [routerLink]="[ '/product-category', 'desserts' ]">
+          <img src="../../../assets/images/cake.svg" alt="" [style.width]="'35px'" [style.margin]="'auto'">
+          <a routerLinkActive="active" class="nav-link"
+            tabindex="1">Десерти</a>
+        </li>
+        <li  [routerLink]="[ '/product-category', 'drinks' ]">
+          <img src="../../../assets/images/smoothie.svg" alt="" [style.width]="'40px'" [style.margin]="'auto'">
+          <a routerLinkActive="active" class="nav-link"
+            tabindex="1">Напої</a>
+        </li>
+        <li  [routerLink]="[ '/hits']">
+          <img src="../../../assets/images/favorites.svg" alt="" [style.width]="'35px'" [style.margin]="'auto'">
+          <a routerLinkActive="active" class="nav-link" tabindex="1">Хіти</a>
+        </li>
+      </ul>
     </div>
   </div>
+</div>
