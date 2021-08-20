@@ -1,0 +1,88 @@
+@import '../../shared/style/fonts.scss';
+
+.site-content {
+  width: 945px;
+  margin: auto;
+}
+
+h1 {
+  padding: 20px 0 2px;
+  border-bottom: 5px solid #fe4c2b;
+  width: 294px;
+  font-size: 30px;
+  margin: 20px auto 10px;
+  font-family: 'FuturaMediumC';
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'FuturaBookC';
+  font-size: 18px;
+  line-height: 1.3em;
+}
+
+.p-container {
+  margin: 30px 0;
+
+  a {
+    color: #337ab7;
+  }
+
+  a:active {
+    color: red;
+  }
+}
+
+section {
+  padding: 30px 0 20px;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'FuturaBookC';
+    font-size: 18px;
+    line-height: 1.3em
+  }
+}
+
+.leave-a-review {
+  width: 181.72px;
+  height: 52px;
+  background: #fe4c2b;
+  color: #fff;
+  font-size: 19px;
+  padding: 13px 10px 12px !important;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  font-family: 'FuturaBookC';
+  align-self: flex-end;
+}
+
+.more {
+  width: 177.89px;
+  height: 52px;
+  background: #fe4c2b;
+  color: #fff;
+  cursor: pointer;
+  font-size: 19px;
+  padding: 13px 10px 12px !important;
+  font-family: 'FuturaBookC';
+  margin: 0 auto 10px;
+  border: none;
+  outline: none;
+}
+
+.review-item {
+  list-style: none;
+  width: 945px;
+  height: 106px;
+  background-color: #f7f7f6;
+  margin-bottom: 20px;
+}
