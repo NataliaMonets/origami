@@ -1,0 +1,389 @@
+@import '../../shared/style/fonts.scss';
+
+.site-content {
+  margin: auto;
+  width: 1140px;
+}
+
+.home-image {
+  margin: 35px auto 15px;
+}
+
+.discounts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr;
+  margin-bottom: 90px;
+
+  h2 {
+    grid-column: 1/4;
+  }
+}
+
+h2 {
+  border-bottom: 5px solid #fe4c2b;
+  margin: 20px auto 20px;
+  font-size: 30px;
+  font-family: 'FuturaMediumC';
+  font-weight: 500;
+  line-height: 1.1;
+  padding: 20px 0 2px;
+}
+
+.rolls {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr;
+  margin-bottom: 30px;
+
+  h2 {
+    grid-column: 1/4;
+  }
+}
+
+.sets {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr;
+  margin-bottom: 30px;
+
+  h2 {
+    grid-column: 1/4;
+  }
+}
+
+.pizza {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr;
+
+  h2 {
+    grid-column: 1/4;
+  }
+}
+
+.discr-item {
+  grid-column: 1/2;
+  width: 360px;
+
+  h3 {
+    text-align: center;
+    margin: 0 auto 5px;
+    line-height: 1.3em;
+  }
+}
+
+.disc-time {
+  text-align: center;
+  font-family: 'FuturaBookC';
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.item-name {
+  color: #11c459;
+  font-size: 20px;
+  font-family: 'FuturaMediumC';
+  font-weight: 500;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.prod-img {
+  margin: 0 auto 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.timer-numbers {
+  font-size: 20px;
+  margin: 10px 0;
+  line-height: 1.3em;
+  font-family: 'FuturaBookC';
+  font-weight: 600;
+}
+
+.description {
+  margin: 0 auto 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  width: 310px;
+  text-align: center;
+  font-family: 'FuturaBookC';
+  font-size: 19px;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px auto;
+}
+
+.order {
+  width: 119.39px;
+  height: 52px;
+  margin-top: 4px;
+  color: #fff;
+  background: #fe4c2b;
+  font-size: 19px;
+  font-family: 'FuturaBookC';
+  padding: 13px 10px 12px !important;
+  outline: none;
+  border: none;
+}
+
+.add {
+  margin: 0 7px 0 0;
+}
+
+.add-ing {
+  color: black;
+  display: flex;
+  align-items: center;
+  font-family: 'FuturaMediumC';
+  font-size: 15px;
+  margin-left: 25px;
+}
+
+.weight {
+  margin: 3px 0 0 2px;
+  font-family: 'FuturaBookC';
+  color: #000;
+  font-size: 18px;
+  line-height: 1.3em;
+}
+
+.sale-price {
+  font-size: 25px;
+  font-family: 'FuturaMediumC';
+  color: #fe4c2b;
+  line-height: 1.3em;
+}
+
+.sale {
+  font-weight: 400;
+  font-family: 'FuturaBookC';
+  font-size: 25px;
+  line-height: 1.3em
+}
+
+.sushi-rolls-pizza-order {
+  width: 274.39px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-order-sushi {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-sushi-rolls-pizza {
+  margin-right: 2px;
+  font-size: 25px;
+  font-family: 'FuturaMediumC';
+  line-height: 1.3em;
+}
+
+.amount {
+  color: #ff1714;
+  font-size: 25px;
+  font-family: 'FuturaMediumC';
+  margin-bottom: 5px;
+  line-height: 1.3em;
+}
+
+.other-prod {
+  background: #11c459;
+  font-size: 19px;
+  padding: 13px 35px 12px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  border: none;
+  margin: auto;
+  grid-column: 1/4;
+  margin-top: 90px;
+
+  a {
+    text-decoration: none;
+    font-family: 'FuturaBookC';
+    font-size: 19px;
+    color: #fff;
+  }
+}
+
+.diameter {
+  margin: 0 0 6px;
+  font-family: 'FuturaBookC';
+  color: #000;
+  font-size: 18px;
+  line-height: 1.3em;
+}
+
+.pizza-diameter {
+  width: 155px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pizza-order {
+  width: 310px;
+  margin: 15px auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.advants {
+  width: 100%;
+  height: 375px;
+  margin-top: 60px;
+}
+
+.advant-item {
+  padding: 0 15px;
+  width: 285px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advants-header {
+  text-align: center;
+  margin: 20px 0 10px;
+  font-size: 30px;
+  font-family: 'FuturaMediumC';
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.advantages {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4fr;
+  grid-template-rows: 2fr;
+
+  p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: 'FuturaMediumC';
+    line-height: 1.3em;
+  }
+}
+
+.advant-item2 {
+  padding: 0 15px;
+  width: 285px;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advant-item3 {
+  padding: 0 15px;
+  width: 285px;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advant-item4 {
+  padding: 0 15px;
+  width: 285px;
+  grid-column: 4/5;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advant-item5 {
+  padding: 0 15px;
+  width: 285px;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advant-item6 {
+  padding: 0 15px;
+  width: 285px;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advant-item7 {
+  padding: 0 15px;
+  width: 285px;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advant-item8 {
+  padding: 0 15px;
+  width: 285px;
+  grid-column: 4/5;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cat-description {
+  width: 100%;
+  height: 346px;
+  overflow-y: scroll;
+  margin: 50px 0 !important;
+  border-top: 3px solid #11c459;
+  padding: 35px 0;
+
+  p {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-family: 'FuturaBookC';
+    font-size: 18px;
+    line-height: 1.3em;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-family: 'FuturaMediumC';
+    font-size: 24px;
+    line-height: 1.1em;
+    margin: 20px 0 10px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'FuturaMediumC';
+    line-height: 1.1;
+    border: none;
+  }
+}
+
+.ul-description {
+    margin-bottom: 10px;
+    font-family: 'FuturaBookC';
+    font-size: 18px;
+    line-height: 1.3em;
+    list-style: circle;
+}
