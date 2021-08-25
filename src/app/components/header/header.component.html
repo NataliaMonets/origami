@@ -1,4 +1,9 @@
 <div class="header">
+  <div class="cart">
+    <p>0</p>
+    <img src="../../../assets/images/shopping-cart.svg" alt="" [style.width]="'28px'">
+    <p>0 грн</p>
+  </div>
   <div class="header-main">
     <a [routerLink]="['']" class="origami-img">
       <img src="https://origami.lviv.ua/_nuxt/f2f7469.png" alt="" [style.width]="'188px'">
@@ -44,7 +49,7 @@
     <div class="menu-header">
       <ul class="menu">
         <li [routerLink]="[ '/product-category', 'pizza' ]">
-          <img src="../../../assets/images/pizza-slice.svg" alt="" [style.width]="'40px'" [style.margin]="'0 auto 12px'"> 
+          <img src="../../../assets/images/pizza-slice.svg" alt="" [style.width]="'35px'" [style.margin]="'5px auto 12px'"> 
           <a routerLinkActive="active" class="nav-link"
             tabindex="1">Піца</a>
         </li>

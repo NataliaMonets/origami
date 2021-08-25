@@ -1,1 +1,10 @@
-<p>admin works!</p>
+<div class="site-content">
+  <div class="admin-components">
+    <button class="link-cat" type="button" [routerLink]="[ 'category' ]" routerLinkActive="active">Category</button>
+    <button class="link-cat" type="button" [routerLink]="[ 'product' ]" routerLinkActive="active">Product</button>
+    <button class="link-cat" type="button" [routerLink]="[ 'order' ]" routerLinkActive="active">Order</button>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

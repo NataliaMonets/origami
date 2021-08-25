@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
@@ -20,6 +25,7 @@ import { PromotionsComponent } from './pages/promotions/promotions.component';
 import { SertifikatiComponent } from './pages/sertifikati/sertifikati.component';
 import { VidgukiComponent } from './pages/vidguki/vidguki.component';
 import { YakZamovitiComponent } from './pages/yak-zamoviti/yak-zamoviti.component';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +50,11 @@ import { YakZamovitiComponent } from './pages/yak-zamoviti/yak-zamoviti.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

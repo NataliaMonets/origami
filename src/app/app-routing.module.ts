@@ -29,12 +29,12 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'hits', component: HitsComponent },
-  // { path: 'admin', component: AdminComponent, canActivate: [AdminGuard] ,children: [
-  //   { path: '', pathMatch: 'full', redirectTo: 'discount' },
-  //   { path: 'category', component: AdminCategoryComponent },
-  //   { path: 'product', component: AdminProductComponent },
-  //   { path: 'order', component: AdminOrderComponent },
-  // ] },
+  { path: 'admin', component: AdminComponent, children: [
+    { path: '', pathMatch: 'full', redirectTo: 'category' },
+    { path: 'category', component: AdminCategoryComponent },
+    { path: 'product', component: AdminProductComponent },
+    { path: 'order', component: AdminOrderComponent },
+  ] },
 ];
 
 @NgModule({

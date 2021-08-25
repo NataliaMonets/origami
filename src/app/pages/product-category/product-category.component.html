@@ -1,1 +1,11 @@
-<p>product-category works!</p>
+<div class="site-content" *ngFor="let prod of userProduct">
+  <div class="discr-item">
+    <a href=""><img class="prod-img" [src]="prod.image" alt="" [style.width]="'298.56px'"></a>
+    <h3>
+      <a href="" class="item-name">{{prod.title}}</a>
+    </h3>
+    <p class="description">{{prod.description}}</p>
+    <div><span class="price-sushi-rolls-pizza">{{prod.price}}</span><span class="weight">{{prod.weight}}</span></div>
+    <button class="order">ЗАМОВИТИ</button>
+  </div>
+</div>
