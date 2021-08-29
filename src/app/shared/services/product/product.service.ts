@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { IProduct } from '../../models/product/product.model';
 
 @Injectable({
@@ -16,8 +18,12 @@ export class ProductService {
       weight: '500 г',
       path: 'pizza'
     }
-  ]
-  constructor() { }
+  ];
+  
+  private url: string;
+  constructor(private http: HttpClient) { 
+    this.url = 'http://localhost:3000/products';
+  }
 
   getProducts(): Array<IProduct> {
     return this.arrProduct;
@@ -26,4 +32,8 @@ export class ProductService {
   addProducts(product: IProduct): void {
     this.arrProduct.push(product);
   } 
+
+  get(): Observable<Array<IProduct>> {
+    return this.http.get<Array<IProduct>>(this.url);
+  }
 }

@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  isShow = true;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  showNav(): void {
+    this.isShow = !this.isShow;
+  }
 }

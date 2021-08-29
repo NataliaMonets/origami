@@ -1,12 +1,16 @@
-<div class="header">
-  <div class="cart">
-    <p>0</p>
-    <img src="../../../assets/images/shopping-cart.svg" alt="" [style.width]="'28px'">
-    <p>0 грн</p>
-  </div>
+<div class="row">
+  <i class="uis uis-bars" (click)="showNav()"></i>
+  <img src="../../../assets/images/52d8c3b.png" alt="">
+</div>
+<div class="cart">
+  <p>0</p>
+  <img src="../../../assets/images/shopping-cart.svg" alt="">
+  <p class="price">0 грн</p>
+</div>
+<div class="header" [ngClass]="{'show': isShow}">
   <div class="header-main">
     <a [routerLink]="['']" class="origami-img">
-      <img src="https://origami.lviv.ua/_nuxt/f2f7469.png" alt="" [style.width]="'188px'">
+      <img src="https://origami.lviv.ua/_nuxt/f2f7469.png" alt="" class="logo">
     </a>
     <div class="top-header">
       <div class="language">
@@ -49,19 +53,17 @@
     <div class="menu-header">
       <ul class="menu">
         <li [routerLink]="[ '/product-category', 'pizza' ]">
-          <img src="../../../assets/images/pizza-slice.svg" alt="" [style.width]="'35px'" [style.margin]="'5px auto 12px'"> 
-          <a routerLinkActive="active" class="nav-link"
-            tabindex="1">Піца</a>
+          <img src="../../../assets/images/pizza-slice.svg" alt="" [style.width]="'35px'"
+            [style.margin]="'5px auto 12px'">
+          <a routerLinkActive="active" class="nav-link" tabindex="1">Піца</a>
         </li>
         <li [routerLink]="[ '/product-category', 'rolls' ]">
-          <img src="../../../assets/images/roll.svg" alt="" [style.width]="'30px'" [style.margin]="'auto'"> 
-          <a routerLinkActive="active" class="nav-link"
-            tabindex="1">Роли</a>
+          <img src="../../../assets/images/roll.svg" alt="" [style.width]="'30px'" [style.margin]="'auto'">
+          <a routerLinkActive="active" class="nav-link" tabindex="1">Роли</a>
         </li>
         <li [routerLink]="[ '/product-category', 'wok' ]">
           <img src="../../../assets/images/noodles.svg" alt="" [style.width]="'35px'" [style.margin]="'auto'">
-          <a routerLinkActive="active" class="nav-link"
-            tabindex="1">Wok</a>
+          <a routerLinkActive="active" class="nav-link" tabindex="1">Wok</a>
         </li>
         <li [routerLink]="[ '/product-category', 'sets' ]">
           <img src="../../../assets/images/sushi-set.svg" alt="" [style.width]="'40px'" [style.margin]="'auto'">
@@ -69,28 +71,24 @@
             сети</a>
         </li>
         <li [routerLink]="[ '/product-category', 'sushi' ]">
-          <img src="../../../assets/images/sushi.svg" alt="" [style.width]="'40px'" [style.margin]="'auto'"> 
-          <a routerLinkActive="active" class="nav-link"
-            tabindex="1">Суші</a>
+          <img src="../../../assets/images/sushi.svg" alt="" [style.width]="'40px'" [style.margin]="'auto'">
+          <a routerLinkActive="active" class="nav-link" tabindex="1">Суші</a>
         </li>
         <li [routerLink]="[ '/product-category', 'soups-salads' ]">
-          <img src="../../../assets/images/bowl.svg" alt="" [style.width]="'35px'" [style.margin]="'auto'"> 
-          <a routerLinkActive="active" class="nav-link"
-            tabindex="1">Супи,
+          <img src="../../../assets/images/bowl.svg" alt="" [style.width]="'35px'" [style.margin]="'auto'">
+          <a routerLinkActive="active" class="nav-link" tabindex="1">Супи,
             салати
           </a>
         </li>
         <li [routerLink]="[ '/product-category', 'desserts' ]">
           <img src="../../../assets/images/cake.svg" alt="" [style.width]="'35px'" [style.margin]="'auto'">
-          <a routerLinkActive="active" class="nav-link"
-            tabindex="1">Десерти</a>
+          <a routerLinkActive="active" class="nav-link" tabindex="1">Десерти</a>
         </li>
-        <li  [routerLink]="[ '/product-category', 'drinks' ]">
+        <li [routerLink]="[ '/product-category', 'drinks' ]">
           <img src="../../../assets/images/smoothie.svg" alt="" [style.width]="'40px'" [style.margin]="'auto'">
-          <a routerLinkActive="active" class="nav-link"
-            tabindex="1">Напої</a>
+          <a routerLinkActive="active" class="nav-link" tabindex="1">Напої</a>
         </li>
-        <li  [routerLink]="[ '/hits']">
+        <li [routerLink]="[ '/hits']">
           <img src="../../../assets/images/favorites.svg" alt="" [style.width]="'35px'" [style.margin]="'auto'">
           <a routerLinkActive="active" class="nav-link" tabindex="1">Хіти</a>
         </li>

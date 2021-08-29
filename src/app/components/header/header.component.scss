@@ -1,154 +1,364 @@
 @import '../../shared/style/fonts.scss';
 
 a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 a:active {
-    color: black;
+  color: black;
 }
 
 a[tabindex]:focus {
-    color:black;
-    outline: none;
+  color: black;
+  outline: none;
 }
 
 .header {
-    box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
-    height: 190px;
-    width: 100%;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+  height: 190px;
+  width: 100%;
 }
 
 .cart {
-    width: 95px;
-    height: 95px;
-    background-color: #11c459;
-    border-radius: 50%;
-    position: fixed;
-    top: 240px;
-    right: 20px;
-    width: 95px;
-    height: 95px;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-family: 'FuturaBookC';
-    font-size: 18px;
+  width: 95px;
+  height: 95px;
+  background-color: #11c459;
+  border-radius: 50%;
+  position: fixed;
+  top: 240px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'FuturaBookC';
+  font-size: 18px;
+
+  img {
+    width: 28px;
+  }
 }
 
 .menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-family: 'FuturaMediumC';
+  font-size: 18px;
+  width: 877px;
+  margin: 7px auto 0;
+
+  li {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.menu-header {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+.top-menu {
+  display: flex;
+  list-style: none;
+  color: #999;
+  font-size: 16px;
+
+  li {
+    padding: 5px 7px;
+  }
+
+  a {
+    color: #999;
+  }
+
+  li:active {
+    background-color: rgb(235, 233, 233);
+    height: 30px;
+  }
+
+  li:hover {
+    background-color: rgb(235, 233, 233);
+    height: 30px;
+  }
+}
+
+.top-menu-search {
+  display: flex;
+
+  img {
+    margin: 2px;
+  }
+}
+
+.header-main {
+  height: 100%;
+  max-width: 1170px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 877.5px;
+  grid-template-rows: 44px 60px 96px;
+}
+
+.top-header {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  font-family: 'FuturaBookC';
+}
+
+.origami-img {
+  grid-column: 1/2;
+  margin: 26px 0 0 43px;
+  grid-row: 1/3;
+}
+
+.middle-header {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: 'FuturaBookC';
+  font-size: 20px;
+
+  p {
+    height: 20px;
+    margin-top: 16px;
+    text-align: center;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 440px;
+  height: 60px;
+}
+
+.language a {
+  margin-right: 5px;
+}
+
+.language {
+  a:active {
+    color: red;
+  }
+
+  a[tabindex]:focus {
+    color: red;
+    outline: none;
+  }
+}
+
+.shedule {
+  i {
+    color: red;
+  }
+
+}
+
+.logo {
+  width: 188px;
+}
+
+.row {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    width: 100px;
+  }
+
+  .menu {
+    font-size: 14px;
+    width: 809px;
+  }
+
+  .header-main {
+    max-width: 1000px;
+    grid-template-columns: auto 809px;
+  }
+
+  .origami-img {
+    margin: 0 0 0 26px;
+    grid-row: 2/3;
+  }
+
+  .middle-header {
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .logo {
+    width: 75px;
+  }
+
+  .menu {
+    font-size: 14px;
+    width: 625px;
+  }
+
+  .header-main {
+    max-width: 750px;
+    grid-template-columns: auto 625px;
+  }
+
+  .top-header {
+    grid-column: 1/3;
+  }
+
+  .origami-img {
+    grid-column: 1/2;
+    margin: 20px 0 0 0;
+    grid-row: 3/4;
+  }
+
+  .middle-header {
+    grid-column: 1/3;
+  }
+
+  .info {
+    width: 390px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .show {
+    display: none;
+  }
+
+  .row {
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #ff1714;
+    display: flex;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+
+    i {
+      margin: 5px 0 0 10px;
+      color: #ff1613;
+      font-size: 30px;
+    }
+
+    img {
+      width: 61px;
+      margin: auto;
+    }
+  }
+
+  .header {
+    z-index: 9999;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+    height: 833px;
+    width: 731px;
+  }
+
+  .cart {
+    top: 7px;
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    font-size: 14px;
+
+    img {
+      width: 20px;
+    }
+  }
+
+  .price {
+    display: none;
+  }
+
+  .menu {
     display: flex;
     justify-content: space-between;
     list-style: none;
     font-family: 'FuturaMediumC';
     font-size: 18px;
-    width: 877px;
+    width: 645px;
     margin: 7px auto 0;
+    flex-wrap: wrap;
+    text-align: center;
 
     li {
-        display: flex;
-        flex-direction: column;
+      width: 215px;
+      display: flex;
+      flex-direction: column;
     }
-}
+  }
 
-.menu-header {
-    grid-row: 3/4;
-    grid-column: 2/3;
-}
+  .menu-header {
+    grid-column: 1/2;
+  }
 
-.top-menu {
-    display: flex;
-    list-style: none;
-    color: #999;
-    font-size: 16px;
+  .top-menu {
+    display: none;
+  }
 
-    li {
-        padding: 5px 7px;
-    }
+  .top-menu-search {
+    display: none;
+  }
 
-    a{
-        color: #999;
-    }
-
-    li:active {
-        background-color: rgb(235, 233, 233);
-        height: 30px;
-    }
-
-    li:hover {
-        background-color: rgb(235, 233, 233);
-        height: 30px;
-    }
-}
-
-.top-menu-search {
-    display: flex;
-
-    img {
-        margin: 2px;
-    }
-}
-
-.header-main{
+  .header-main {
     height: 100%;
-    width: 1170px;
+    max-width: 1170px;
     margin: auto;
     display: grid;
-    grid-template-columns: auto 877.5px ;
-    grid-template-rows: 44px 60px 96px;
-}
+    grid-template-columns: 1fr;
+    grid-template-rows: 44px 84px 96px;
+  }
 
-.top-header{
-    grid-column: 2/3;
+  .top-header {
+    grid-column: 1/2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 44px;
-    font-family: 'FuturaBookC';
-}
+  }
 
-.origami-img{
+  .origami-img {
+    display: none;
+  }
+
+  .middle-header {
     grid-column: 1/2;
-    margin: 26px 0 0 43px;
-    grid-row: 1/3;
-}
-
-.middle-header{
-    grid-column: 2/3;
     grid-row: 2/3;
-    display: flex;
-    height: 60px;
-    justify-content: space-between;
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
-    font-family: 'FuturaBookC';
+    display: block;
+    height: 84px;
+    border-top: none;
     font-size: 20px;
-    p {
-        height: 20px;
-        margin-top: 16px;
-        text-align: center;
-    }
-}
 
-.info {
+    p {
+      height: 20px;
+      margin-top: 16px;
+      text-align: start;
+    }
+  }
+
+  .info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 440px;
     height: 60px;
-}
-
-.language a {
-    margin-right: 5px;
-}
-
-.shedule {
-    i {
-        color: red;
-    }
-
+  }
 }

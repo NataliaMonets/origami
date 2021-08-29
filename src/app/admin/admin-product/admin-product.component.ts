@@ -30,8 +30,15 @@ export class AdminProductComponent implements OnInit {
     this.productForm = this.fb.group({
       title: [null, Validators.required],
       description: [null, Validators.required],
+      price: [null, Validators.required],
+      weight: [null, Validators.required],
       image: this.customImage
     })
+    // this.productService.get().subscribe(data => {
+    //   if(data){
+    //     this.adminProducts = data;
+    //   }
+    // })
   }
 
   loadProducts(): void {

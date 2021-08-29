@@ -7,17 +7,27 @@
         <label for="description">Description</label>
         <textarea formControlName="description" id="description" cols="30" rows="3"></textarea>
     </div>
+    <div>
+        <label for="price">Price</label>
+        <input formControlName="price" type="text" id="price">
+    </div>
+    <div>
+        <label for="weight">Weight</label>
+        <input formControlName="weight" type="text" id="weight">
+    </div>
     <button [disabled]="productForm.invalid" type="submit">Add</button>
 </form>
 <hr>
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Title</th>
-            <th scope="col">Text</th>
-            <th scope="col">Image</th>
-            <th scope="col">Actions</th>
+            <th>#</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Weight</th>
+            <th>Image</th>
+            <th>Actions</th>   
         </tr>
     </thead>
     <tbody>
@@ -25,6 +35,8 @@
             <td>{{ i + 1 }}</td>
             <td>{{ prod.title }}</td>
             <td>{{ prod.description | slice:0:50 }}...</td>
+            <td>{{prod.price}}</td>
+            <td>{{prod.weight}}</td>
             <td>
                 <img [src]="prod.image" width="80px" alt="">
             </td>
