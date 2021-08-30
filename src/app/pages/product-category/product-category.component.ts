@@ -20,7 +20,12 @@ export class ProductCategoryComponent implements OnInit {
   }
 
   loadProducts():void {
-    this.userProduct = this.productService.getProducts();
-    console.log(this.userProduct);
+    this.productService.get().subscribe(
+      data => {
+        this.userProduct = data;
+      }, err => {
+        console.log(err);
+      }
+    )
   }
 }

@@ -28,6 +28,7 @@ import { VidgukiComponent } from './pages/vidguki/vidguki.component';
 import { YakZamovitiComponent } from './pages/yak-zamoviti/yak-zamoviti.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +57,7 @@ import { YakZamovitiComponent } from './pages/yak-zamoviti/yak-zamoviti.componen
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

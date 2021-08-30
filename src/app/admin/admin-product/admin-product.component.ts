@@ -14,6 +14,8 @@ export class AdminProductComponent implements OnInit {
   public adminProducts: Array<IProduct> = [];
   public productForm!: FormGroup;
   public customImage = 'https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg';
+  private editProductID = 0;
+  public editStatus = false;
 
   constructor(
     private productService: ProductService,
@@ -34,19 +36,72 @@ export class AdminProductComponent implements OnInit {
       weight: [null, Validators.required],
       image: this.customImage
     })
-    // this.productService.get().subscribe(data => {
-    //   if(data){
-    //     this.adminProducts = data;
-    //   }
-    // })
   }
 
+  // loadProducts(): void {
+  //   this.adminProducts = this.productService.getProducts();
+  // }
+
+  // createProduct(): void {
+  //   this.productService.addProducts(this.productForm.value);
+  //   this.productForm.reset();
+  // }
+
   loadProducts(): void {
-    this.adminProducts = this.productService.getProducts();
+    this.productService.get().subscribe(
+      data => {
+        this.adminProducts = data;
+      }, err => {
+        console.log(err);
+      }
+    )
   }
 
   createProduct(): void {
-    this.productService.addProducts(this.productForm.value);
-    this.productForm.reset();
+    const newProduct = this.productForm.value;
+    this.productService.create(newProduct).subscribe(
+      () => {
+        this.loadProducts();
+      }, err => {
+        console.log(err);
+      }
+    )
+    this.initProductForm();
   }
+
+  deleteProduct(product: IProduct): void {
+    this.productService.delete(product.id as number).subscribe(
+      () => {
+        this.loadProducts();
+      }, err => {
+        console.log(err);
+      }
+    )
+  }
+
+  editProduct(product: IProduct): void {
+    this.productForm.patchValue({
+      title: product.title,
+      description: product.description,
+      price: product.description,
+      weight: product.weight,
+      image: product.image
+    });
+    this.editProductID = product.id as number;
+    this.editStatus = true;
+  }
+
+  updateProduct(): void {
+    const product = this.productForm.value;
+    this.productService.update(product, this.editProductID).subscribe(
+      () => {
+        this.loadProducts();
+      }, err => {
+        console.log(err);
+      }
+    );
+    this.initProductForm();
+    this.editStatus = false;
+  }
+
 }
