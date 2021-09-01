@@ -1,13 +1,166 @@
 {
+  "category": [
+    {
+      "name": "Піца",
+      "path": "pizza",
+      "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "id": 1
+    },
+    {
+      "name": "Роли",
+      "path": "rolls",
+      "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "id": 2
+    },
+    {
+      "name": "Wok",
+      "path": "wok",
+      "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "id": 3
+    },
+    {
+      "name": "Суші сети",
+      "path": "sets",
+      "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "id": 4
+    },
+    {
+      "name": "Суші",
+      "path": "sushi",
+      "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "id": 5
+    },
+    {
+      "name": "Супи, салати",
+      "path": "soups-salads",
+      "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "id": 6
+    },
+    {
+      "name": "Десерти",
+      "path": "desserts",
+      "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "id": 7
+    },
+    {
+      "name": "Напої",
+      "path": "drinks",
+      "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "id": 8
+    }
+  ],
   "products": [
     {
+      "category": {
+        "name": "Піца",
+        "path": "pizza",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 1
+      },
       "title": "ПІЦА МАРГАРИТА",
       "description": "помідор, моцарела, пармезан, спеції, соус",
-      "path": "pizza",
+      "path": "margarita",
       "price": "128 грн",
       "weight": "500 г",
       "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 1
+    },
+    {
+      "category": {
+        "name": "Роли",
+        "path": "rolls",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 2
+      },
+      "title": "КРАБ З АНАНАСОМ",
+      "description": "рис, сніжний краб, ананас, огірок, японський майонез, кунжут мікс, норі",
+      "path": "crab-z-ananasom",
+      "price": " 91 грн",
+      "weight": "205 г",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
       "id": 2
+    },
+    {
+      "category": {
+        "name": "Суші сети",
+        "path": "sets",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 4
+      },
+      "title": "EVERYDAY",
+      "description": "Сніжний краб, Хаято, 3 сири, Масаго Кані",
+      "path": "Everyday",
+      "price": "437 грн",
+      "weight": "890 г",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 3
+    },
+    {
+      "category": {
+        "name": "Суші",
+        "path": "sushi",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 5
+      },
+      "title": "ГУНКАН “ТОБІКО”",
+      "description": "ікра тобіко, рис, норі",
+      "path": "gunkan-tobiko",
+      "price": "43 грн",
+      "weight": "30 г",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 4
+    },
+    {
+      "category": {
+        "name": "Супи, салати",
+        "path": "soups-salads",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 6
+      },
+      "title": "САЛАТ “ЧУКА”",
+      "description": "Водорості хіяши вакаме, кунжут, горіховий соус.",
+      "path": "salat-chuka",
+      "price": "82 грн",
+      "weight": "120 г",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 5
+    },
+    {
+      "category": {
+        "name": "Десерти",
+        "path": "desserts",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 7
+      },
+      "title": "БЛЕК БЕРРІ",
+      "description": "Ніжне чорничне конфеті, ванільний мус \"Леджер\", хрусткий чіпс з мигдалем та фундуком, макарон на мигдальній пудрі.",
+      "path": "blek-beri",
+      "price": "71 грн",
+      "weight": "130 г",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 6
+    },
+    {
+      "category": {
+        "name": "Напої",
+        "path": "drinks",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 8
+      },
+      "title": "МОРШИНСЬКА НЕГАЗОВАНА 0,5Л",
+      "description": "Моршинська негазована 0,5л",
+      "path": "morshynska-negazovana",
+      "price": "20 грн",
+      "weight": "500 г",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 7
     }
   ]
 }

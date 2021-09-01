@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { ICategory } from 'src/app/shared/models/category/category.model';
 import { IProduct } from 'src/app/shared/models/product/product.model';
+import { CategoryService } from 'src/app/shared/services/category/category.service';
 import { ProductService } from 'src/app/shared/services/product/product.service';
 
 @Component({
@@ -11,6 +13,7 @@ import { ProductService } from 'src/app/shared/services/product/product.service'
 })
 export class AdminProductComponent implements OnInit {
 
+  public adminCategories : Array<ICategory> = [];
   public adminProducts: Array<IProduct> = [];
   public productForm!: FormGroup;
   public customImage = 'https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg';
@@ -18,35 +21,40 @@ export class AdminProductComponent implements OnInit {
   public editStatus = false;
 
   constructor(
+    private categoryService: CategoryService,
     private productService: ProductService,
     private toastr: ToastrService,
     private fb: FormBuilder
   ) { }
 
   ngOnInit(): void {
+    this.loadCategories();
     this.initProductForm();
     this.loadProducts();
   }
 
+  loadCategories(): void {
+    this.categoryService.get().subscribe(
+      data => {
+        this.adminCategories = data;
+      }, err => {
+        console.log(err);
+      }
+    )
+  }
+
   initProductForm(): void {
     this.productForm = this.fb.group({
+      category: ['Select category', Validators.required],
       title: [null, Validators.required],
       description: [null, Validators.required],
       path: [null, Validators.required],
       price: [null, Validators.required],
       weight: [null, Validators.required],
-      image: this.customImage
+      image: [this.customImage, Validators.required],
+      count: [1]
     })
   }
-
-  // loadProducts(): void {
-  //   this.adminProducts = this.productService.getProducts();
-  // }
-
-  // createProduct(): void {
-  //   this.productService.addProducts(this.productForm.value);
-  //   this.productForm.reset();
-  // }
 
   loadProducts(): void {
     this.productService.get().subscribe(
@@ -82,10 +90,11 @@ export class AdminProductComponent implements OnInit {
 
   editProduct(product: IProduct): void {
     this.productForm.patchValue({
+      category: product.category.name,
       title: product.title,
       description: product.description,
       path: product.path,
-      price: product.description,
+      price: product.price,
       weight: product.weight,
       image: product.image
     });

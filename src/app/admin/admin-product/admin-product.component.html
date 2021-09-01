@@ -1,5 +1,11 @@
 <form [formGroup]="productForm" (ngSubmit)="editStatus ? updateProduct() : createProduct()">
   <div>
+    <select formControlName="category">
+      <option selected disabled>Select category</option>
+      <option *ngFor="let cat of adminCategories" [ngValue]="cat">{{cat.name}}</option>
+    </select>
+  </div>
+  <div>
     <label for="title">Title</label>
     <input formControlName="title" type="text" id="title">
   </div>
@@ -26,6 +32,7 @@
   <thead>
     <tr>
       <th>#</th>
+      <th>Category</th>
       <th>Title</th>
       <th>Description</th>
       <th>Path</th>
@@ -38,8 +45,9 @@
   <tbody>
     <tr *ngFor="let prod of adminProducts; index as i">
       <td>{{ i + 1 }}</td>
+      <td>{{ prod.category.name }}</td>
       <td>{{ prod.title }}</td>
-      <td>{{ prod.description | slice:0:50 }}...</td>
+      <td>{{ prod.description | slice:0:30 }}...</td>
       <td>{{prod.path}}</td>
       <td>{{prod.price}}</td>
       <td>{{prod.weight}}</td>
