@@ -3,7 +3,8 @@
     {
       "title": "ПІЦА МАРГАРИТА",
       "description": "помідор, моцарела, пармезан, спеції, соус",
-      "price": "помідор, моцарела, пармезан, спеції, соус",
+      "path": "pizza",
+      "price": "128 грн",
       "weight": "500 г",
       "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
       "id": 2

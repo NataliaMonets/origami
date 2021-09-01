@@ -32,6 +32,7 @@ export class AdminProductComponent implements OnInit {
     this.productForm = this.fb.group({
       title: [null, Validators.required],
       description: [null, Validators.required],
+      path: [null, Validators.required],
       price: [null, Validators.required],
       weight: [null, Validators.required],
       image: this.customImage
@@ -83,6 +84,7 @@ export class AdminProductComponent implements OnInit {
     this.productForm.patchValue({
       title: product.title,
       description: product.description,
+      path: product.path,
       price: product.description,
       weight: product.weight,
       image: product.image

@@ -8,6 +8,10 @@
     <textarea formControlName="description" id="description" cols="30" rows="3"></textarea>
   </div>
   <div>
+    <label for="path">Path</label>
+    <input formControlName="path" type="text" id="path">
+  </div>
+  <div>
     <label for="price">Price</label>
     <input formControlName="price" type="text" id="price">
   </div>
@@ -24,6 +28,7 @@
       <th>#</th>
       <th>Title</th>
       <th>Description</th>
+      <th>Path</th>
       <th>Price</th>
       <th>Weight</th>
       <th>Image</th>
@@ -35,6 +40,7 @@
       <td>{{ i + 1 }}</td>
       <td>{{ prod.title }}</td>
       <td>{{ prod.description | slice:0:50 }}...</td>
+      <td>{{prod.path}}</td>
       <td>{{prod.price}}</td>
       <td>{{prod.weight}}</td>
       <td>
