@@ -27,6 +27,11 @@ import { SertifikatiComponent } from './pages/sertifikati/sertifikati.component'
 import { VidgukiComponent } from './pages/vidguki/vidguki.component';
 import { YakZamovitiComponent } from './pages/yak-zamoviti/yak-zamoviti.component';
 
+// import { AngularFireModule } from '@angular/fire';
+// import { AngularFireStorageModule } from '@angular/fire/storage';
+// import { AngularFireAuthModule } from '@angular/fire/auth';
+// import { AngularFirestoreModule } from '@angular/fire/firestore';
+// import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -58,6 +63,10 @@ import { YakZamovitiComponent } from './pages/yak-zamoviti/yak-zamoviti.componen
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
+    // AngularFireModule.initializeApp(environment.firebaseConfig),
+    // AngularFireStorageModule,
+    // AngularFireAuthModule,
+    // AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

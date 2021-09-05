@@ -1,12 +1,13 @@
 .discr-item {
-    grid-column: 1/2;
+    width: 310px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .site-content {
+    padding: 30px;
     width: 1170px;
-    display: grid;
-    grid-template-columns: 3fr;
+    display: flex;
 }

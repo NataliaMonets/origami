@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IProduct } from 'src/app/shared/models/product/product.model';
+import { OrderService } from 'src/app/shared/services/order/order.service';
 import { ProductService } from 'src/app/shared/services/product/product.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private orderService: OrderService
   ) { }
 
   ngOnInit(): void {
@@ -32,4 +34,19 @@ export class ProductDetailsComponent implements OnInit {
     )
   }
 
+  countProduct(product: IProduct, checker: boolean): void {
+    if (checker) {
+      product.count++;
+    }
+    else {
+      if (product.count > 1) {
+        product.count--;
+      }
+    }
+  }
+
+  addToCart(product: IProduct): void {
+    this.orderService.addToCart(product);
+    product.count = 1;
+  }
 }

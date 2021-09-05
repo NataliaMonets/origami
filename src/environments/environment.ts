@@ -4,7 +4,15 @@
 
 export const environment = {
   production: false,
-  BACKEND_URL: 'http://localhost:3000/'
+  BACKEND_URL: 'http://localhost:3000/',
+  firebaseConfig: {
+    apiKey: "AIzaSyD4ky_KTguAuZdwuLfThtfUqZCWlr2v3hQ",
+    authDomain: "origami-a7cca.firebaseapp.com",
+    projectId: "origami-a7cca",
+    storageBucket: "origami-a7cca.appspot.com",
+    messagingSenderId: "991391722902",
+    appId: "1:991391722902:web:d016f673f1e954d3ac01b7"
+  }
 };
 
 /*

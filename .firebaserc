@@ -1,9 +1,9 @@
 {
   "targets": {
-    "origami-8b37b": {
+    "origami-a7cca": {
       "hosting": {
         "origami": [
-          "origami-8b37b"
+          "origami-a7cca"
         ]
       }
     }

@@ -60,11 +60,11 @@
       "title": "ПІЦА МАРГАРИТА",
       "description": "помідор, моцарела, пармезан, спеції, соус",
       "path": "margarita",
-      "price": "128 грн",
+      "price": "128",
       "weight": "500 г",
       "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
       "count": 1,
-      "id": 1
+      "id": 9
     },
     {
       "category": {
@@ -76,11 +76,27 @@
       "title": "КРАБ З АНАНАСОМ",
       "description": "рис, сніжний краб, ананас, огірок, японський майонез, кунжут мікс, норі",
       "path": "crab-z-ananasom",
-      "price": " 91 грн",
+      "price": "91",
       "weight": "205 г",
       "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
       "count": 1,
-      "id": 2
+      "id": 10
+    },
+    {
+      "category": {
+        "name": "Wok",
+        "path": "wok",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 3
+      },
+      "title": "ЛОКШИНА WOK З КРЕВЕТКОЮ",
+      "description": "Креветка, морква, болгарський перець, кукурудза міні, капуста брюсельська, кунжут мішаний, локшина пшенична, броколі, стручкова квасоля, соус Пеппер солодкий",
+      "path": "noodles-with-shrimp",
+      "price": "169",
+      "weight": "470 г",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 11
     },
     {
       "category": {
@@ -92,11 +108,11 @@
       "title": "EVERYDAY",
       "description": "Сніжний краб, Хаято, 3 сири, Масаго Кані",
       "path": "Everyday",
-      "price": "437 грн",
+      "price": "437",
       "weight": "890 г",
       "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
       "count": 1,
-      "id": 3
+      "id": 12
     },
     {
       "category": {
@@ -108,11 +124,11 @@
       "title": "ГУНКАН “ТОБІКО”",
       "description": "ікра тобіко, рис, норі",
       "path": "gunkan-tobiko",
-      "price": "43 грн",
+      "price": "43",
       "weight": "30 г",
       "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
       "count": 1,
-      "id": 4
+      "id": 13
     },
     {
       "category": {
@@ -121,14 +137,14 @@
         "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
         "id": 6
       },
-      "title": "САЛАТ “ЧУКА”",
-      "description": "Водорості хіяши вакаме, кунжут, горіховий соус.",
-      "path": "salat-chuka",
-      "price": "82 грн",
-      "weight": "120 г",
+      "title": "МІСО З ЛОСОСЕМ",
+      "description": "Лосось, водорості вакаме, сир тофу.",
+      "path": "miso-z-lososem",
+      "price": "99",
+      "weight": "350 г",
       "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
       "count": 1,
-      "id": 5
+      "id": 14
     },
     {
       "category": {
@@ -140,11 +156,11 @@
       "title": "БЛЕК БЕРРІ",
       "description": "Ніжне чорничне конфеті, ванільний мус \"Леджер\", хрусткий чіпс з мигдалем та фундуком, макарон на мигдальній пудрі.",
       "path": "blek-beri",
-      "price": "71 грн",
+      "price": "71",
       "weight": "130 г",
       "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
       "count": 1,
-      "id": 6
+      "id": 15
     },
     {
       "category": {
@@ -156,11 +172,12 @@
       "title": "МОРШИНСЬКА НЕГАЗОВАНА 0,5Л",
       "description": "Моршинська негазована 0,5л",
       "path": "morshynska-negazovana",
-      "price": "20 грн",
+      "price": "20",
       "weight": "500 г",
       "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
       "count": 1,
-      "id": 7
+      "id": 16
     }
-  ]
+  ],
+  "orders": []
 }

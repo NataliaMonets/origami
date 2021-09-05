@@ -1,13 +1,19 @@
 <div>
-    <div class="row">
+  <div class="row">
+    <div>
+      <img [src]="product?.image" class="card-img-top">
+      <div class="card-body text-center">
+        <h4 class="card-title mb-5">{{product?.title}}</h4>
+        <p>{{product?.description}}</p>
+        <div><span class="price-sushi-rolls-pizza">{{product.price * product.count}} грн</span><span
+            class="weight">{{product.weight}}</span></div>
         <div>
-            <img [src]="product?.image" class="card-img-top">
-            <div class="card-body text-center">
-                <h4 class="card-title mb-5">{{product?.title}}</h4>
-                <p>{{product?.description}}</p>
-                <p>Вага: {{product?.weight}}</p>
-                <h3>Ціна: {{product?.price}}</h3>
-            </div>
+          <button (click)="countProduct(product, false)">-</button>
+          <input type="text" [(ngModel)]="product.count">
+          <button (click)="countProduct(product, true)">+</button>
         </div>
+        <button class="order" (click)="addToCart(product)">ЗАМОВИТИ</button>
+      </div>
     </div>
+  </div>
 </div>
