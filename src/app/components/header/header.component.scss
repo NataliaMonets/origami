@@ -87,14 +87,6 @@ a[tabindex]:focus {
   }
 }
 
-.top-menu-search {
-  display: flex;
-
-  img {
-    margin: 2px;
-  }
-}
-
 .header-main {
   height: 100%;
   max-width: 1170px;
@@ -311,10 +303,6 @@ a[tabindex]:focus {
   }
 
   .top-menu {
-    display: none;
-  }
-
-  .top-menu-search {
     display: none;
   }
 

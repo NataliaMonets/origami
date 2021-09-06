@@ -2,11 +2,13 @@
   <i class="uis uis-bars" (click)="showNav()"></i>
   <img src="../../../assets/images/52d8c3b.png" alt="">
 </div>
-<div class="cart">
-  <p>0</p>
-  <img src="../../../assets/images/shopping-cart.svg" alt="">
-  <p class="price">{{totalPrice}} грн</p>
-</div>
+<a [routerLink]="['/cart']">
+  <div class="cart">
+    <p>0</p>
+    <img src="../../../assets/images/shopping-cart.svg" alt="">
+    <p class="price">{{totalPrice}} грн</p>
+  </div>
+</a>
 <div class="header" [ngClass]="{'show': isShow}">
   <div class="header-main">
     <a [routerLink]="['']" class="origami-img">
@@ -18,7 +20,7 @@
         <a [routerLink]="['']" tabindex="1">RU</a>
         <a [routerLink]="['']" tabindex="1">EN</a>
       </div>
-      <div class="top-menu-search">
+      <div>
         <ul class="top-menu">
           <li>
             <a tabindex="1" [routerLink]="['/pro-nas']" routerLinkActive="active">Про нас</a>
@@ -35,8 +37,10 @@
           <li>
             <a tabindex="1" [routerLink]="['/promotions']" routerLinkActive="active">Акції</a>
           </li>
+          <li>
+            <a tabindex="1" [routerLink]="['/promotions']" routerLinkActive="active">Увійти</a>
+          </li>
         </ul>
-        <img src="../../../assets/images/search.svg" alt="" [style.width]="'14px'">
       </div>
     </div>
     <div class="middle-header">

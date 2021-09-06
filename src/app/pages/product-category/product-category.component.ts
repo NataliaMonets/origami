@@ -12,6 +12,7 @@ import { ProductService } from 'src/app/shared/services/product/product.service'
 export class ProductCategoryComponent implements OnInit {
 
   public userProduct: Array<IProduct> = [];
+  currentCategory: string = '';
 
   constructor(
     private productService: ProductService,
@@ -36,6 +37,7 @@ export class ProductCategoryComponent implements OnInit {
     this.productService.getByCategory(categoryName as string).subscribe(
       data => {
         this.userProduct = data;
+        this.currentCategory = this.userProduct[0].category.name;
       }, err => {
         console.log(err);
       }
@@ -45,8 +47,7 @@ export class ProductCategoryComponent implements OnInit {
   countProduct(product: IProduct, checker: boolean): void {
     if (checker) {
       product.count++;
-    }
-    else {
+    } else {
       if (product.count > 1) {
         product.count--;
       }

@@ -1,1 +1,80 @@
-<p>cart works!</p>
+<div class="site-content">
+  <h1>КОШИК</h1>
+  <div class="page-content">
+    <div>
+      <p>Сума мінімального замовлення: <br>
+        149 грн по Львову, 299 грн за місто</p>
+      <form action="" [formGroup]="orderForm">
+        <input type="text" formControlName="userName" placeholder="Ім'я">
+        <input type="text" formControlName="userPhone" placeholder="Телефон">
+        <input type="text" formControlName="userEmail" placeholder="Email">
+        <input formControlName="userCity" type="text" placeholder="Місто">
+        <input type="text" formControlName="userStreet" placeholder="Вулиця">
+        <div>
+          <input type="text" formControlName="userHouse" placeholder="Будинок">
+          <input type="text" formControlName="userFlat" placeholder="Кв./офіс">
+        </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Коментар до замовлення"
+          formControlName="userComment"></textarea>
+        <div>
+          <input type="checkbox" id="ifTel">
+          <label for="ifTel">Не телефонувати для підтвердження замовлення</label>
+        </div>
+        <div class="radio-div">
+          <div class="delivery">
+            <p>Доставка:</p>
+            <div>
+              <input type="radio">
+              <label>Якомога швидко</label>
+            </div>
+            <button (click)="addOrder()">ОФОРМИТИ</button>
+          </div>
+          <div>
+            <p>Спосіб оплати:</p>
+            <div class="payment">
+              <div>
+                <input type="radio" id="choice1">
+                <label for="choice1" value="cashCourier">Готівкою кур'єру</label>
+              </div>
+              <div>
+                <input type="radio" id="choice2">
+                <label for="choice2" value="cardCourier">Карткою кур'єру</label>
+              </div>
+              <div>
+                <input type="radio" id="choice3">
+                <label for="choice3" value="cardOnline">Карткою онлайн</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div>
+      <div class="minSum">
+        <p>Мінімальна сума замовлення — 149 грн.</p>
+      </div>
+      <div *ngIf="!cart.length">
+        <p>Ваш кошик порожній</p>
+        <button><a href="">Повернутись в магазин</a></button>
+      </div>
+      <div class="prodOrder" *ngIf="cart.length">
+        <div *ngFor="let order of cart">
+          <a href=""><img src="" alt=""></a>
+          <div>
+            <a href="">{{order.title}}</a>
+            <p>{{order.weight}}</p>
+            <div>
+              <div class="productCountWrapper">
+                <button (click)="productCount(order,false)">-</button>
+                <input type="text" [(ngModel)]="order.count">
+                <button (click)="productCount(order,true)">+</button>
+              </div>
+              <span>{{order.count * order.price}}</span><i>грн</i>
+            </div>
+          </div>
+          <div>Сума: {{totalPrice}} грн</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

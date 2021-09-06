@@ -31,17 +31,15 @@ export class OrderService {
 
   addToCart(product: IProduct): void {
     let cart: Array<IProduct> = [];
-    if (localStorage.getItem('cart')) {
+    if(localStorage.getItem('cart')){
       cart = JSON.parse(<string>localStorage.getItem('cart'));
-      if (cart.some(prod => prod.id === product.id)) {
+      if(cart.some(prod => prod.id === product.id)){
         const index = cart.findIndex(prod => prod.id === product.id);
         cart[index].count += product.count;
-      }
-      else {
+      } else {
         cart.push(product);
       }
-    }
-    else {
+    } else {
       cart.push(product);
     }
     localStorage.setItem('cart', JSON.stringify(cart));
