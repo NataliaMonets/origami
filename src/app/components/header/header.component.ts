@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit {
 
   getTotalPrice(): void {
     if(this.headerCart.length > 0){
-      this.totalPrice = this.headerCart.reduce((total, prod) => total + prod.price * prod.price, 0);
+      this.totalPrice = this.headerCart.reduce((total, prod) => total + (prod.price * prod.count), 0);
     }
     else {
       this.totalPrice = 0;

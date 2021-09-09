@@ -1,25 +1,104 @@
+@import '../../shared/style/fonts.scss';
+
 .table {
-    border: 1px solid black;
-    width: 100%;
-    margin-top: 20px;
-}
-
-thead {
-    border: 1px solid black;
-}
-
-tbody {
-    border: 1px solid black;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
 }
 
 th {
-    border: 1px solid black;
+  padding: 3px;
+  border: 1px solid black;
+  border-radius: 2px;
 }
 
 td {
-    border: 1px solid black;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 2px;
 }
 
 form {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.form-com {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin: 10px 0;
+  }
+
+  input {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-family: 'FuturaMediumC';
+    font-size: 16px;
+    padding-left: 5px;
+  }
+
+  input:focus {
+    border: 2px solid #7db6f7;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0px 0px 5px #79b8ff;
+  }
+}
+
+.site-content {
+  margin-left: 30px;
+  font-family: 'FuturaMediumC';
+  font-size: 16px;
+}
+
+.add {
+  margin-top: 10px;
+  font-family: 'FuturaMediumC';
+  font-size: 16px;
+  width: 70px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgb(73, 154, 247);
+  background-color: rgb(73, 154, 247);
+  color: white;
+}
+
+.save {
+  margin-top: 10px;
+  font-family: 'FuturaMediumC';
+  font-size: 16px;
+  width: 70px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid green;
+  background-color: green;
+  color: white;
+}
+
+.edit {
+  margin-right: 10px;
+  font-family: 'FuturaMediumC';
+  font-size: 16px;
+  width: 70px;
+  height: 40px;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid orange;
+  background-color: orange;
+}
+
+.delete {
+  font-family: 'FuturaMediumC';
+  font-size: 16px;
+  width: 70px;
+  height: 40px;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid red;
+  background-color: red;
+  color: white;
 }

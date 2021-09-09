@@ -1,63 +1,65 @@
-<form [formGroup]="productForm" (ngSubmit)="editStatus ? updateProduct() : createProduct()">
-  <div>
-    <select formControlName="category">
-      <option selected disabled>Select category</option>
-      <option *ngFor="let cat of adminCategories" [ngValue]="cat">{{cat.name}}</option>
-    </select>
-  </div>
-  <div>
-    <label for="title">Title</label>
-    <input formControlName="title" type="text" id="title">
-  </div>
-  <div>
-    <label for="description">Description</label>
-    <textarea formControlName="description" id="description" cols="30" rows="3"></textarea>
-  </div>
-  <div>
-    <label for="path">Path</label>
-    <input formControlName="path" type="text" id="path">
-  </div>
-  <div>
-    <label for="price">Price</label>
-    <input formControlName="price" type="text" id="price">
-  </div>
-  <div>
-    <label for="weight">Weight</label>
-    <input formControlName="weight" type="text" id="weight">
-  </div>
-  <button [disabled]="productForm.invalid" type="submit" [textContent]="editStatus ? 'Save' : 'Add'"></button>
-</form>
-<hr>
-<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Category</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Path</th>
-      <th>Price</th>
-      <th>Weight</th>
-      <th>Image</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let prod of adminProducts; index as i">
-      <td>{{ i + 1 }}</td>
-      <td>{{ prod.category.name }}</td>
-      <td>{{ prod.title }}</td>
-      <td>{{ prod.description | slice:0:30 }}...</td>
-      <td>{{prod.path}}</td>
-      <td>{{prod.price}}</td>
-      <td>{{prod.weight}}</td>
-      <td>
-        <img [src]="prod.image" width="80px" alt="">
-      </td>
-      <td>
-        <button (click)="editProduct(prod)">edit</button>
-        <button (click)="deleteProduct(prod)">delete</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="site-content">
+  <form [formGroup]="productForm" (ngSubmit)="editStatus ? updateProduct() : createProduct()">
+    <div>
+      <select formControlName="category" class="selection">
+        <option selected disabled>Select category</option>
+        <option *ngFor="let cat of adminCategories" [ngValue]="cat">{{cat.name}}</option>
+      </select>
+    </div>
+    <div class="form-com">
+      <label for="title">Title</label>
+      <input formControlName="title" type="text" id="title">
+    </div>
+    <div class="form-com">
+      <label for="description">Description</label>
+      <textarea formControlName="description" id="description" cols="30" rows="3"></textarea>
+    </div>
+    <div class="form-com">
+      <label for="path">Path</label>
+      <input formControlName="path" type="text" id="path">
+    </div>
+    <div class="form-com">
+      <label for="price">Price</label>
+      <input formControlName="price" type="text" id="price">
+    </div>
+    <div class="form-com">
+      <label for="weight">Weight</label>
+      <input formControlName="weight" type="text" id="weight">
+    </div>
+    <button [disabled]="productForm.invalid" type="submit" [textContent]="editStatus ? 'Save' : 'Add'" [class]="editStatus ? 'save' : 'add'"></button>
+  </form>
+  <hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Category</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Path</th>
+        <th>Price</th>
+        <th>Weight</th>
+        <th>Image</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of adminProducts; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ prod.category.name }}</td>
+        <td>{{ prod.title }}</td>
+        <td>{{ prod.description | slice:0:30 }}...</td>
+        <td>{{prod.path}}</td>
+        <td>{{prod.price}}</td>
+        <td>{{prod.weight}}</td>
+        <td>
+          <img [src]="prod.image" width="80px" alt="">
+        </td>
+        <td>
+          <button (click)="editProduct(prod)" class="edit">Edit</button>
+          <button (click)="deleteProduct(prod)" class="delete">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
