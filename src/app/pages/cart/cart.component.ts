@@ -10,8 +10,8 @@ import { OrderService } from 'src/app/shared/services/order/order.service';
 })
 export class CartComponent implements OnInit {
 
+  showPreOrder = true;
   public cart: Array<IProduct> = [];
-
   public totalPayment!: string;
   public totalPrice = 0;
 
@@ -93,6 +93,10 @@ export class CartComponent implements OnInit {
 
       }
     )
+  }
+
+  preOrder(): void {
+    this.showPreOrder = !this.showPreOrder;
   }
 
 }

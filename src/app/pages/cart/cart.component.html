@@ -1,82 +1,91 @@
 <div class="site-content">
   <h1>КОШИК</h1>
   <div class="page-content">
-    <div>
+    <div class="left-container">
       <p>Сума мінімального замовлення: <br>
         149 грн по Львову, 299 грн за місто</p>
       <form action="" [formGroup]="orderForm">
         <input type="text" formControlName="userName" placeholder="Ім'я">
-        <input type="text" formControlName="userPhone" placeholder="Телефон">
+        <input type="text" formControlName="userPhone" placeholder="Телефон*">
         <input type="text" formControlName="userEmail" placeholder="Email">
         <input formControlName="userCity" type="text" placeholder="Місто">
         <input type="text" formControlName="userStreet" placeholder="Вулиця">
-        <div>
+        <div class="address">
           <input type="text" formControlName="userHouse" placeholder="Будинок">
           <input type="text" formControlName="userFlat" placeholder="Кв./офіс">
         </div>
         <textarea name="" id="" cols="30" rows="10" placeholder="Коментар до замовлення"
           formControlName="userComment"></textarea>
-        <div>
-          <input type="checkbox" id="ifTel">
+        <div class="tel-check">
+          <input type="checkbox" id="ifTel" class="custom-checkbox">
           <label for="ifTel">Не телефонувати для підтвердження замовлення</label>
         </div>
         <div class="radio-div">
           <div class="delivery">
             <p>Доставка:</p>
-            <div>
-              <input type="radio">
-              <label>Якомога швидко</label>
+            <div class="choise">
+              <input type="radio" class="custom-radio" id="ch1" checked>
+              <label for="ch1">Якомога швидко</label>
             </div>
-            <button (click)="addOrder()">ОФОРМИТИ</button>
+            <div class="choise">
+              <input type="radio" class="custom-radio" id="ch2" (click)="preOrder()">
+              <label for="ch2">Передзамовдення</label>
+            </div>
+            <!-- <button (click)="addOrder()" *ngIf="totalPrice > 149" class="add-order">ОФОРМИТИ</button> -->
           </div>
           <div>
             <p>Спосіб оплати:</p>
             <div class="payment">
-              <div>
-                <input type="radio" id="choice1">
+              <div class="choise">
+                <input type="radio" id="choice1" class="custom-radio" checked>
                 <label for="choice1" value="cashCourier">Готівкою кур'єру</label>
               </div>
-              <div>
-                <input type="radio" id="choice2">
+              <div class="choise">
+                <input type="radio" id="choice2" class="custom-radio">
                 <label for="choice2" value="cardCourier">Карткою кур'єру</label>
               </div>
-              <div>
-                <input type="radio" id="choice3">
+              <div class="choise">
+                <input type="radio" id="choice3" class="custom-radio">
                 <label for="choice3" value="cardOnline">Карткою онлайн</label>
               </div>
             </div>
           </div>
         </div>
+        <div class="pre-order" *ngIf="!showPreOrder">
+          <input type="text" name="" id="" placeholder="Дата">
+          <input type="text" name="" id="" placeholder="00:00">
+        </div>
+        <button (click)="addOrder()" *ngIf="totalPrice > 149" class="add-order">ОФОРМИТИ</button>
       </form>
     </div>
-    <div>
-      <div class="minSum">
+    <div class="right-container">
+      <div class="minSum" *ngIf="!(totalPrice > 149)">
         <p>Мінімальна сума замовлення — 149 грн.</p>
       </div>
       <div *ngIf="!cart.length">
         <p>Ваш кошик порожній</p>
         <button><a href="">Повернутись в магазин</a></button>
       </div>
-      <div class="prodOrder" *ngIf="cart.length">
-        <div *ngFor="let order of cart">
-          <a href=""><img src="" alt=""></a>
-          <div>
-            <div>
-              <a href="">{{order.title}}</a>
+      <div *ngIf="cart.length">
+        <div *ngFor="let order of cart" class="prodOrder">
+          <a href=""><img [src]="order.image" alt="" [style.width]="'102px'"></a>
+          <div class="prodOrderRight">
+            <div class="prodOrderTop">
+              <a href="">{{order.title | titlecase}}</a>
               <img src="../../../assets/images/delete.svg" [style.width]="'20px'" (click)="removeProduct(order)">
             </div>
-            <p>{{order.weight}}</p>
-            <div>
+            <p class="prodOrderMiddle">{{order.weight}}</p>
+            <div class="prodOrderBottom">
               <div class="productCountWrapper">
-                <button (click)="productCount(order,false)">-</button>
+                <button (click)="productCount(order,false)"><i class="uil uil-minus"></i></button>
                 <input type="text" [(ngModel)]="order.count">
-                <button (click)="productCount(order,true)">+</button>
+                <button (click)="productCount(order,true)"><i class="uil uil-plus"></i></button>
               </div>
-              <span>{{order.count * order.price}}</span><i>грн</i>
+              <span>{{order.count * order.price}} грн</span>
             </div>
           </div>
-          <div>Сума: {{totalPrice}} грн</div>
         </div>
+        <div class="total">Сума: {{totalPrice}} грн</div>
       </div>
     </div>
   </div>
