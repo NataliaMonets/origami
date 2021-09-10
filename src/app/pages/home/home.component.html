@@ -3,7 +3,7 @@
     class="home-image">
   <section class="discounts">
     <h2>АКЦІЇ</h2>
-    <div class="discr-item">
+    <!-- <div class="discr-item">
       <div>
         <a href=""><img src="../../../assets/images/havaj-e1590393484721-small.jpg" alt="" [style.width]="'275px'"
             class="prod-img"></a>
@@ -27,11 +27,26 @@
         </div>
         <button class="order">ЗАМОВИТИ</button>
       </div>
-    </div>
+    </div> -->
+    <!-- <div class="discr-item" *ngFor="let homeprod of userProduct">
+      <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"><img class="prod-img" [src]="homeprod.image" alt="" [style.width]="'298.56px'"></a>
+      <h3>
+        <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"
+        routerLinkActive="router-link-active">{{homeprod.title}}</a>
+      </h3>
+      <p class="description">{{homeprod.description}}</p>
+      <div><span class="price-sushi-rolls-pizza">{{homeprod.price * homeprod.count}} грн</span><span class="weight">{{homeprod.weight}}</span></div>
+      <div>
+        <button (click)="countProduct(homeprod, false)">-</button>
+        <input type="text" [(ngModel)]="homeprod.count">
+        <button (click)="countProduct(homeprod, true)">+</button>
+      </div>
+      <button class="order" (click)="addToCart(homeprod)">ЗАМОВИТИ</button>
+    </div> -->
   </section>
   <section class="rolls">
     <h2>РОЛИ</h2>
-    <div class="discr-item">
+    <!-- <div class="discr-item">
       <div>
         <a href=""><img class="prod-img" src="../../../assets/images/16088144125fe48f4c088cb.jpg" alt=""
             [style.width]="'298.56px'"></a>
@@ -52,12 +67,29 @@
           <button class="order">ЗАМОВИТИ</button>
         </div>
       </div>
-    </div>
+    </div> -->
+      <div class="discr-item" *ngFor="let homeprod of userProduct">
+        <div *ngIf="homeprod.category.name == 'Роли'">
+          <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"><img class="prod-img" [src]="homeprod.image" alt="" [style.width]="'298.56px'"></a>
+        <h3>
+          <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"
+          routerLinkActive="router-link-active">{{homeprod.title}}</a>
+        </h3>
+        <p class="description">{{homeprod.description}}</p>
+        <div><span class="price-sushi-rolls-pizza">{{homeprod.price * homeprod.count}} грн</span><span class="weight">{{homeprod.weight}}</span></div>
+        <div>
+          <button (click)="countProduct(homeprod, false)">-</button>
+          <input type="text" [(ngModel)]="homeprod.count">
+          <button (click)="countProduct(homeprod, true)">+</button>
+        </div>
+        <button class="order" (click)="addToCart(homeprod)">ЗАМОВИТИ</button>
+        </div>
+      </div>
     <button class="other-prod"><a [routerLink]="[ '/product-category', 'rolls' ]">ПЕРЕГЛЯНУТИ ВСІ РОЛИ</a></button>
   </section>
   <section class="sets">
     <h2>СУШІ СЕТИ</h2>
-    <div class="discr-item">
+    <!-- <div class="discr-item">
       <div>
         <a href=""><img class="prod-img" src="../../../assets/images/1610978997600596b5b5414.jpg" alt=""
             [style.width]="'360px'"></a>
@@ -78,12 +110,29 @@
           <button class="order">ЗАМОВИТИ</button>
         </div>
       </div>
+    </div> -->
+    <div class="discr-item" *ngFor="let homeprod of userProduct">
+      <div *ngIf="homeprod.category.name == 'Суші сети'">
+        <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"><img class="prod-img" [src]="homeprod.image" alt="" [style.width]="'298.56px'"></a>
+      <h3>
+        <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"
+        routerLinkActive="router-link-active">{{homeprod.title}}</a>
+      </h3>
+      <p class="description">{{homeprod.description}}</p>
+      <div><span class="price-sushi-rolls-pizza">{{homeprod.price * homeprod.count}} грн</span><span class="weight">{{homeprod.weight}}</span></div>
+      <div>
+        <button (click)="countProduct(homeprod, false)">-</button>
+        <input type="text" [(ngModel)]="homeprod.count">
+        <button (click)="countProduct(homeprod, true)">+</button>
+      </div>
+      <button class="order" (click)="addToCart(homeprod)">ЗАМОВИТИ</button>
+      </div>
     </div>
     <button class="other-prod"><a [routerLink]="[ '/product-category', 'sets' ]">ПЕРЕГЛЯНУТИ ВСІ СЕТИ</a></button>
   </section>
   <section class="pizza">
     <h2>ПІЦА ЛЬВІВ</h2>
-    <div class="discr-item">
+    <!-- <div class="discr-item">
       <div>
         <a href=""><img class="prod-img" src="../../../assets/images/bavarska-small.jpg" alt=""
             [style.width]="'360px'"></a>
@@ -109,6 +158,23 @@
           <div><span class="price-sushi-rolls-pizza">154 грн</span><span class="weight">470 г</span></div>
           <button class="order">ЗАМОВИТИ</button>
         </div>
+      </div>
+    </div> -->
+    <div class="discr-item" *ngFor="let homeprod of userProduct">
+      <div *ngIf="homeprod.category.name == 'Піца'">
+        <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"><img class="prod-img" [src]="homeprod.image" alt="" [style.width]="'298.56px'"></a>
+      <h3>
+        <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"
+        routerLinkActive="router-link-active">{{homeprod.title}}</a>
+      </h3>
+      <p class="description">{{homeprod.description}}</p>
+      <div><span class="price-sushi-rolls-pizza">{{homeprod.price * homeprod.count}} грн</span><span class="weight">{{homeprod.weight}}</span></div>
+      <div>
+        <button (click)="countProduct(homeprod, false)">-</button>
+        <input type="text" [(ngModel)]="homeprod.count">
+        <button (click)="countProduct(homeprod, true)">+</button>
+      </div>
+      <button class="order" (click)="addToCart(homeprod)">ЗАМОВИТИ</button>
       </div>
     </div>
     <button class="other-prod"><a [routerLink]="[ '/product-category', 'pizza' ]">ПЕРЕГЛЯНУТИ ВСІ ПІЦИ</a></button>
