@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { getStorage, ref, uploadBytes, uploadString } from '@angular/fire/storage';
+import { FirebaseApp, FirebaseApps } from '@angular/fire/app';
+import { Storage, StorageInstances } from '@angular/fire/storage';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { Observable } from 'rxjs';
 import { ICategory } from 'src/app/shared/models/category/category.model';
 import { IProduct } from 'src/app/shared/models/product/product.model';
 import { CategoryService } from 'src/app/shared/services/category/category.service';
@@ -19,6 +23,9 @@ export class AdminProductComponent implements OnInit {
   public customImage = 'https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg';
   private editProductID = 0;
   public editStatus = false;
+  public uploadPercent: Observable<number> | undefined | null;
+  public image: string = '';
+  public imageStatus: boolean = false;
 
   constructor(
     private categoryService: CategoryService,
@@ -51,6 +58,7 @@ export class AdminProductComponent implements OnInit {
       path: [null, Validators.required],
       price: [null, Validators.required],
       weight: [null, Validators.required],
+      discount: [null, Validators.required],
       image: [this.customImage, Validators.required],
       count: [1]
     })
@@ -76,6 +84,7 @@ export class AdminProductComponent implements OnInit {
       }
     )
     this.initProductForm();
+    this.imageStatus = false;
   }
 
   deleteProduct(product: IProduct): void {
@@ -96,10 +105,13 @@ export class AdminProductComponent implements OnInit {
       path: product.path,
       price: product.price,
       weight: product.weight,
+      discount: product.discount,
       image: product.image
     });
     this.editProductID = product.id as number;
     this.editStatus = true;
+    this.imageStatus = true;
+    this.image = product.image
   }
 
   updateProduct(): void {
@@ -113,6 +125,17 @@ export class AdminProductComponent implements OnInit {
     );
     this.initProductForm();
     this.editStatus = false;
+    this.imageStatus = false;
   }
 
+  uploadFile(event: any): void {
+    const file = event.target.files[0];
+    const filePath = `images/${file.name}`;
+    const storage = getStorage();
+    const storageRef = ref(storage, filePath);
+    uploadBytes(storageRef, file).then((snapshot) => {
+      console.log('Uploaded a blob or file');
+      console.log(snapshot);
+    })
+  }
 }

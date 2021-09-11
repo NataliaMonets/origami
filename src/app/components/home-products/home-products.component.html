@@ -1,0 +1,24 @@
+<div class="discr-item" *ngFor="let homeprod of userProduct">
+  <div>
+    <h1>{{homeprod.category.name | uppercase}}</h1>
+    <div>
+      <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"><img class="prod-img"
+          [src]="homeprod.image" alt="" [style.width]="'298.56px'"></a>
+      <h3>
+        <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"
+          routerLinkActive="router-link-active">{{homeprod.title}}</a>
+      </h3>
+      <p class="description">{{homeprod.description}}</p>
+      <div><span class="price-sushi-rolls-pizza">{{homeprod.price * homeprod.count}} грн</span><span
+          class="weight">{{homeprod.weight}}</span></div>
+      <div>
+        <button (click)="countProduct(homeprod, false)">-</button>
+        <input type="text" [(ngModel)]="homeprod.count">
+        <button (click)="countProduct(homeprod, true)">+</button>
+      </div>
+      <button class="order" (click)="addToCart(homeprod)">ЗАМОВИТИ</button>
+    </div>
+    <button class="other-prod"><a [routerLink]="[ 'product-category/' + homeprod.category.path ]">ПЕРЕГЛЯНУТИ ВСІ
+        {{homeprod.category.name | uppercase}}</a></button>
+  </div>
+</div>

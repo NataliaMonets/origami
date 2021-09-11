@@ -9,5 +9,6 @@ export interface IProduct {
     weight: string;
     path: string;
     count: number;
+    discount: string;
     id?: number;
 }

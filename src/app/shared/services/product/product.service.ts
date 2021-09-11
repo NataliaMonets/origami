@@ -25,6 +25,10 @@ export class ProductService {
     return this.http.get<Array<IProduct>>(`${this.api.products}?category.path=${categoryName}`);
   }
 
+  getByCategoryLimit(categoryName: string): Observable<Array<IProduct>> {
+    return this.http.get<Array<IProduct>>(`${this.api.products}?category.path=${categoryName}&_limit=3`);
+  }
+
   getByID(id: number): Observable<any> {
     return this.http.get<any>(`${this.api.products}/${id}`);
   }

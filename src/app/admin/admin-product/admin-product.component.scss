@@ -84,6 +84,23 @@ form {
   box-shadow: 0px 0px 5px #79b8ff;
 }
 
+.selection2 {
+  margin-top: 20px;
+  font-family: 'FuturaMediumC';
+  font-size: 16px;
+  width: 200px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.selection2:focus {
+  border: 2px solid #7db6f7;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0px 0px 5px #79b8ff;
+}
+
 .add {
   margin-top: 10px;
   font-family: 'FuturaMediumC';

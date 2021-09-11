@@ -2,34 +2,13 @@
   <img src="https://origami.lviv.ua/image/ws6ywctr1f/znl0yq4jn72s.jpg" alt="" [style.width]="'1140px'"
     class="home-image">
   <section class="discounts">
-    <h2>АКЦІЇ</h2>
-    <!-- <div class="discr-item">
-      <div>
-        <a href=""><img src="../../../assets/images/havaj-e1590393484721-small.jpg" alt="" [style.width]="'275px'"
-            class="prod-img"></a>
-        <div class="disc-time">
-          <p>До кінця акції:</p>
-          <p class="timer-numbers">0-2:0-27:0-25</p>
-        </div>
-      </div>
-      <div>
-        <h3>
-          <a href="" class="item-name">ПІЦА ГАВАЙСЬКА 30 СМ</a>
-        </h3>
-        <p class="description">ананас, шинка, вершки, моцарела, пармезан, спеції, соус</p>
-      </div>
-      <a href="" class="add-ing"><img src="../../../assets/images/ccd730c.png" alt="" [style.width]="'22px'"
-          class="add"><span>додати або змінити інгредієнти</span></a>
-      <div class="price">
-        <div>
-          <span class="sale">153 грн</span>
-          <div><span class="sale-price">122 грн</span><span class="weight">500 г</span></div>
-        </div>
-        <button class="order">ЗАМОВИТИ</button>
-      </div>
-    </div> -->
-    <!-- <div class="discr-item" *ngFor="let homeprod of userProduct">
-      <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"><img class="prod-img" [src]="homeprod.image" alt="" [style.width]="'298.56px'"></a>
+    <app-home-products [homeCategory]="'pizza'"></app-home-products>
+    <app-home-products [homeCategory]="'rolls'"></app-home-products>
+    <!-- <h2>АКЦІЇ</h2>
+    <div class="discr-item" *ngFor="let homeprod of userProduct">
+      <img src="" alt="" >
+      <div *ngIf="homeprod.discount == 'true'">
+        <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"><img class="prod-img" [src]="homeprod.image" alt="" [style.width]="'298.56px'"></a>
       <h3>
         <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"
         routerLinkActive="router-link-active">{{homeprod.title}}</a>
@@ -42,32 +21,11 @@
         <button (click)="countProduct(homeprod, true)">+</button>
       </div>
       <button class="order" (click)="addToCart(homeprod)">ЗАМОВИТИ</button>
+      </div>
     </div> -->
   </section>
-  <section class="rolls">
+  <!-- <section class="rolls">
     <h2>РОЛИ</h2>
-    <!-- <div class="discr-item">
-      <div>
-        <a href=""><img class="prod-img" src="../../../assets/images/16088144125fe48f4c088cb.jpg" alt=""
-            [style.width]="'298.56px'"></a>
-      </div>
-      <div>
-        <h3>
-          <a href="" class="item-name">ТРИ СИРИ</a>
-        </h3>
-        <p class="description">рис, сир філадельфія, соєвий сир тофу, вершковий сир, японський майонез, кунжут</p>
-      </div>
-      <div class="sushi-rolls-pizza-order">
-        <div>
-          <p class="amount">8 шт.</p>
-          <img src="../../../assets/images/f49f4da.png" alt="" [style.width]="'74px'">
-        </div>
-        <div class="price-order-sushi">
-          <div><span class="price-sushi-rolls-pizza">98 грн</span><span class="weight">215 г</span></div>
-          <button class="order">ЗАМОВИТИ</button>
-        </div>
-      </div>
-    </div> -->
       <div class="discr-item" *ngFor="let homeprod of userProduct">
         <div *ngIf="homeprod.category.name == 'Роли'">
           <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"><img class="prod-img" [src]="homeprod.image" alt="" [style.width]="'298.56px'"></a>
@@ -89,28 +47,6 @@
   </section>
   <section class="sets">
     <h2>СУШІ СЕТИ</h2>
-    <!-- <div class="discr-item">
-      <div>
-        <a href=""><img class="prod-img" src="../../../assets/images/1610978997600596b5b5414.jpg" alt=""
-            [style.width]="'360px'"></a>
-      </div>
-      <div>
-        <h3>
-          <a href="" class="item-name">МАКІ-АСОРТІ</a>
-        </h3>
-        <p class="description">«Каппа-макі», «Сяке-макі», «Унагі-макі», «Ебі-макі».</p>
-      </div>
-      <div class="sushi-rolls-pizza-order">
-        <div>
-          <p class="amount">32 шт.</p>
-          <img src="../../../assets/images/f49f4da.png" alt="" [style.width]="'74px'">
-        </div>
-        <div class="price-order-sushi">
-          <div><span class="price-sushi-rolls-pizza">346 грн</span><span class="weight">440 г</span></div>
-          <button class="order">ЗАМОВИТИ</button>
-        </div>
-      </div>
-    </div> -->
     <div class="discr-item" *ngFor="let homeprod of userProduct">
       <div *ngIf="homeprod.category.name == 'Суші сети'">
         <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"><img class="prod-img" [src]="homeprod.image" alt="" [style.width]="'298.56px'"></a>
@@ -132,34 +68,6 @@
   </section>
   <section class="pizza">
     <h2>ПІЦА ЛЬВІВ</h2>
-    <!-- <div class="discr-item">
-      <div>
-        <a href=""><img class="prod-img" src="../../../assets/images/bavarska-small.jpg" alt=""
-            [style.width]="'360px'"></a>
-      </div>
-      <div>
-        <h3>
-          <a href="" class="item-name">ПІЦА БАВАРСЬКА</a>
-        </h3>
-        <p class="description">баварські ковбаски, моцарела, пармезан, спеції, соус</p>
-      </div>
-      <a href="" class="add-ing"><img src="../../../assets/images/ccd730c.png" alt="" [style.width]="'22px'"
-          class="add"><span>додати або змінити інгредієнти</span></a>
-      <div class="pizza-order">
-        <div>
-          <p class="diameter">Діаметр піци, см</p>
-          <div class="pizza-diameter">
-            <img src="../../../assets/images/15965728935f29c4dda992c.png" alt="">
-            <img src="../../../assets/images/завантаження.png" alt="">
-            <img src="../../../assets/images/15965728595f29c4bbd46d3.png" alt="">
-          </div>
-        </div>
-        <div class="price-order-sushi">
-          <div><span class="price-sushi-rolls-pizza">154 грн</span><span class="weight">470 г</span></div>
-          <button class="order">ЗАМОВИТИ</button>
-        </div>
-      </div>
-    </div> -->
     <div class="discr-item" *ngFor="let homeprod of userProduct">
       <div *ngIf="homeprod.category.name == 'Піца'">
         <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"><img class="prod-img" [src]="homeprod.image" alt="" [style.width]="'298.56px'"></a>
@@ -178,7 +86,7 @@
       </div>
     </div>
     <button class="other-prod"><a [routerLink]="[ '/product-category', 'pizza' ]">ПЕРЕГЛЯНУТИ ВСІ ПІЦИ</a></button>
-  </section>
+  </section> -->
   <section class="advants">
     <h1 class="advants-header">ОРІГАМІ – БЕЗКОШТОВНА ДОСТАВКА СУШІ ЛЬВІВ</h1>
     <div class="advantages">
