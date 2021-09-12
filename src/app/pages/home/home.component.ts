@@ -10,13 +10,8 @@ import { ProductService } from 'src/app/shared/services/product/product.service'
 })
 export class HomeComponent implements OnInit {
 
-  public userProduct: Array<IProduct> = [];
-  
-  constructor(
-    private productService: ProductService,
-    private orderService: OrderService
-  ) {
-   }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

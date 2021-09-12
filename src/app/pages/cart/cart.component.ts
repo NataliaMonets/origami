@@ -67,13 +67,11 @@ export class CartComponent implements OnInit {
   }
 
   removeProduct(product: IProduct): void {
-    if (confirm('Are you sure?')) {
       const index = this.cart.findIndex(prod => prod.id === product.id);
       this.cart.splice(index, 1);
       this.totalPrice = this.getTotal(this.cart);
       this.orderService.changeCart$.next(true);
       localStorage.setItem('cart', JSON.stringify(this.cart));
-    }
   }
 
   addOrder(): void {

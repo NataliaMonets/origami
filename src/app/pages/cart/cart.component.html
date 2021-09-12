@@ -63,7 +63,7 @@
       </div>
       <div *ngIf="!cart.length">
         <p>Ваш кошик порожній</p>
-        <button><a href="">Повернутись в магазин</a></button>
+        <button class="return"><a [routerLink]="['']">Повернутись в магазин</a></button>
       </div>
       <div *ngIf="cart.length">
         <div *ngFor="let order of cart" class="prodOrder">

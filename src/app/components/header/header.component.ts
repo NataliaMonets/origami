@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
 
   isShow = true;
   public totalPrice: number = 0;
+  public totalCount: number = 0;
   public headerCart: Array<IProduct> = [];
 
   constructor(
@@ -31,11 +32,21 @@ export class HeaderComponent implements OnInit {
       this.headerCart = JSON.parse(<string>localStorage.getItem('cart'));
     }
     this.getTotalPrice();
+    this.getTotalCount();
   }
 
   getTotalPrice(): void {
     if(this.headerCart.length > 0){
       this.totalPrice = this.headerCart.reduce((total, prod) => total + (prod.price * prod.count), 0);
+    }
+    else {
+      this.totalPrice = 0;
+    }
+  }
+
+  getTotalCount():void {
+    if(this.headerCart.length > 0){
+      this.totalCount = this.headerCart.reduce((total, prod) => total +  prod.count, 0);
     }
     else {
       this.totalPrice = 0;

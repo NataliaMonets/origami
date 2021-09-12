@@ -1,13 +1,230 @@
-.discr-item {
-    width: 310px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+@import '../../shared/style/fonts.scss';
+
+.h1Width {
+  width: 150px;
+}
+
+.h1Width2 {
+  width: 210px;
+}
+
+.h1Width3 {
+  width: 120px;
 }
 
 .site-content {
-    padding: 30px;
-    width: 1170px;
+  width: 100%;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1170px;
+  margin: 30px auto 30px;
+}
+
+h1 {
+  border-bottom: 5px solid #fe4c2b;
+  margin: 20px auto 10px;
+  font-size: 30px;
+  width: 90px;
+  font-family: 'FuturaMediumC';
+  font-weight: 500;
+  line-height: 1.1;
+  padding: 20px 0 2px;
+  text-align: center;
+}
+
+.discr-item {
+  width: 33.3%;
+  margin-bottom: 90px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  h3 {
+    color: #11c459;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-family: 'FuturaMediumC';
+  }
+
+  p {
+    width: 310px;
+    text-align: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 17px;
+    margin: 0 auto 10px;
+    font-family: 'FuturaBookC';
+  }
+
+  a {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    text-decoration: none;
+    color: #11c459;
+  }
+
+  img {
+    margin: auto;
+  }
+}
+
+.price-sushi-rolls-pizza {
+  margin-right: 2px;
+  font-size: 25px;
+  font-family: 'FuturaMediumC';
+}
+
+.weight {
+  font-family: 'FuturaBookC';
+  font-size: 18px;
+  line-height: 1.3em;
+  margin-top: 3px;
+}
+
+.detailes {
+  text-align: center;
+}
+
+.prodCount {
+  margin-top: 25px;
+  font-size: 26px;
+  font-family: 'FuturaMediumC';
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    border: none;
+    background-color: transparent;
+    font-size: 26px;
+  }
+
+  input {
+    font-family: 'FuturaMediumC';
+    font-size: 26px;
+    width: 56px;
+    border: none;
+    outline: none;
+    text-align: center;
+  }
+}
+
+.order {
+  width: 130px;
+  margin: 10px auto 0;
+  color: #fff;
+  background: #fe4c2b;
+  font-size: 19px;
+  padding: 13px 10px 12px !important;
+  border: #fe4c2b;
+  outline: none;
+  text-align: center;
+}
+
+.titleColor {
+  color: #fe4c2b !important;
+}
+
+.sale-wrapper {
+  width: 163px;
+  height: 30px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 40px;
+  left: 135px;
+  width: 100%;
+  background: #fe4c2b;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'FuturaBookC';
+}
+
+.description {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 35px;
+  padding: 0 15px;
+  font-family: 'FuturaBookC';
+}
+
+.descrip {
+  display: flex;
+  align-items: flex-start;
+  width: 33.3%;
+  margin: 5px 0 25px;
+  font-size: 20px;
+
+  img {
+    margin-right: 13px;
+  }
+}
+
+.cat-description {
+  width: 100%;
+  height: 346px;
+  overflow-y: scroll;
+  margin: 50px 0 !important;
+  border-top: 3px solid #11c459;
+  padding: 35px 0;
+
+  p {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-family: 'FuturaBookC';
+    font-size: 18px;
+    line-height: 1.3em;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-family: 'FuturaMediumC';
+    font-size: 24px;
+    line-height: 1.1em;
+    margin: 20px 0 10px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'FuturaMediumC';
+    line-height: 1.1;
+    border: none;
+  }
+}
+
+.ul-description {
+  margin-bottom: 10px;
+  font-family: 'FuturaBookC';
+  font-size: 18px;
+  line-height: 1.3em;
+  list-style: square outside !important;
+}
+
+.cat-descrip {
+  width: 100%;
+  height: 346px;
+  margin: 50px 0 !important;
+  border-top: 3px solid #11c459;
+  padding: 35px 15px 0;
+
+  p {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-family: 'FuturaBookC';
+    font-size: 18px;
+    line-height: 1.3em;
+  }
 }
