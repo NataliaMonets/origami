@@ -26,13 +26,6 @@
       <label for="weight">Weight</label>
       <input formControlName="weight" type="text" id="weight">
     </div>
-    <div>
-      <select formControlName="discount" class="selection2">
-        <option selected disabled>Discount</option>
-        <option>true</option>
-        <option>false</option>
-      </select>
-    </div>
     <button [disabled]="productForm.invalid" type="submit" [textContent]="editStatus ? 'Save' : 'Add'"
       [class]="editStatus ? 'save' : 'add'"></button>
   </form>

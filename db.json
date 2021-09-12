@@ -47,6 +47,12 @@
       "path": "drinks",
       "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
       "id": 8
+    },
+    {
+      "name": "Акція",
+      "path": "discounts",
+      "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "id": 9
     }
   ],
   "products": [
@@ -62,7 +68,6 @@
       "path": "margarita",
       "price": "128",
       "weight": "500 г",
-      "discount": "true",
       "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
       "count": 1,
       "id": 9
@@ -96,7 +101,7 @@
       "path": "noodles-with-shrimp",
       "price": "169",
       "weight": "470 г",
-      "discount": "true",
+      "discount": "false",
       "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
       "count": 1,
       "id": 11
@@ -185,6 +190,223 @@
       "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
       "count": 1,
       "id": 16
+    },
+    {
+      "category": {
+        "name": "Піца",
+        "path": "pizza",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 1
+      },
+      "title": "ПІЦА ДИТЯЧА",
+      "description": "куряче філе, помідор, кукурудза, моцарела, пармезан, спеції, соус",
+      "path": "dityacha",
+      "price": "149",
+      "weight": "500 г",
+      "discount": "true",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 17
+    },
+    {
+      "category": {
+        "name": "Піца",
+        "path": "pizza",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 1
+      },
+      "title": "ПІЦА ДОМАШНЯ",
+      "description": "куряче філе, печериці, помідор, цибулька зелена, моцарела, пармезан, спеції, соус",
+      "path": "domashnya",
+      "price": "149",
+      "weight": "530 г",
+      "discount": "false",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 18
+    },
+    {
+      "category": {
+        "name": "Піца",
+        "path": "pizza",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 1
+      },
+      "title": "ПІЦА БАВАРСЬКА",
+      "description": "баварські ковбаски, моцарела, пармезан, спеції, соус",
+      "path": "bavarska",
+      "price": "154",
+      "weight": "470 г",
+      "discount": "true",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 19
+    },
+    {
+      "category": {
+        "name": "Роли",
+        "path": "rolls",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 2
+      },
+      "title": "ФІРМОВИЙ",
+      "description": "рис, лосось смажений, огірок, сир вершковий, кунжут мікс, норі",
+      "path": "Firmovyi",
+      "price": "89",
+      "weight": "225 г",
+      "discount": "false",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 20
+    },
+    {
+      "category": {
+        "name": "Роли",
+        "path": "rolls",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 2
+      },
+      "title": "СНІЖНИЙ КРАБ",
+      "description": "рис, сніжний краб, огірок, крем сир, японський майонез, кунжут мікс, норі",
+      "path": "snizhnyi-krab",
+      "price": "103",
+      "weight": "225 г",
+      "discount": "false",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 21
+    },
+    {
+      "category": {
+        "name": "Роли",
+        "path": "rolls",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 2
+      },
+      "title": "ЧІЗ КРАБ",
+      "description": "рис, сніжний краб, вершковий сир, сир тофу, японський майонез, кунжут білий, норі",
+      "path": "Cheese-Crab",
+      "price": "108",
+      "weight": "240 г",
+      "discount": "false",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 22
+    },
+    {
+      "category": {
+        "name": "Wok",
+        "path": "wok",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 3
+      },
+      "title": "ЛОКШИНА WOK З КУРКОЮ",
+      "description": "Куряче філе, морква, болгарський перець, кукурудза міні, капуста брюсельська кунжут мішаний, локшина пшенична, броколі, стручкова квасоля, соус Блек Пеппер",
+      "path": "noodles-with-chicken",
+      "price": "124",
+      "weight": "480 г",
+      "discount": "false",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 23
+    },
+    {
+      "category": {
+        "name": "Wok",
+        "path": "wok",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 3
+      },
+      "title": "ЛОКШИНА WOK З ОВОЧАМИ",
+      "description": "Печериці, морква, болгарський перець, кукурудза міні, капуста брюсельська, кунжут мішаний, локшина пшенична, броколі, стручкова квасоля, соус Пеппер солодкий",
+      "path": "noodles-with-vegetables",
+      "price": "113",
+      "weight": "480 г",
+      "discount": "false",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 24
+    },
+    {
+      "category": {
+        "name": "Суші сети",
+        "path": "sets",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 4
+      },
+      "title": "ФРЕШ СЕТ",
+      "description": "Філадельфія з овочами, Чікен рол, Чіз Краб, Фірмовий",
+      "path": "Fresh-set",
+      "price": "370",
+      "weight": "910 г",
+      "discount": "false",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 25
+    },
+    {
+      "category": {
+        "name": "Акція",
+        "path": "discounts",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 9
+      },
+      "title": "ПІЦА ГАВАЙСЬКА 30 СМ",
+      "description": "ананас, шинка, вершки, моцарела, пармезан, спеції, соус",
+      "path": "gavajska",
+      "price": "122",
+      "weight": "500 г",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 26
+    },
+    {
+      "category": {
+        "name": "Акція",
+        "path": "discounts",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 9
+      },
+      "title": "ПІЦА ГАВАЙСЬКА 40 СМ",
+      "description": "ананас, шинка, вершки, моцарела, пармезан, спеції, соус",
+      "path": "gavajska",
+      "price": "188",
+      "weight": "750 г",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 27
+    },
+    {
+      "category": {
+        "name": "Акція",
+        "path": "discounts",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 9
+      },
+      "title": "ФІЛАДЕЛЬФІЯ З ЛОСОСЕМ В КУНЖУТІ",
+      "description": "рис, лосось, сир філадельфія, авокадо, огірок, кунжут мікс",
+      "path": "filadelfiya-z-lososem-v-kunzhuti",
+      "price": "115",
+      "weight": "220 г",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 28
+    },
+    {
+      "category": {
+        "name": "Суші сети",
+        "path": "sets",
+        "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+        "id": 4
+      },
+      "title": "ТРИ ЛОСОСЯ",
+      "description": "Філадельфія фреш, Самурай, Філадельфія з ананасом",
+      "path": "Three-salmon",
+      "price": "437",
+      "weight": "710 г",
+      "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+      "count": 1,
+      "id": 29
     }
   ],
   "orders": [

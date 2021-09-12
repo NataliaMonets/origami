@@ -58,7 +58,6 @@ export class AdminProductComponent implements OnInit {
       path: [null, Validators.required],
       price: [null, Validators.required],
       weight: [null, Validators.required],
-      discount: [null, Validators.required],
       image: [this.customImage, Validators.required],
       count: [1]
     })
@@ -105,7 +104,6 @@ export class AdminProductComponent implements OnInit {
       path: product.path,
       price: product.price,
       weight: product.weight,
-      discount: product.discount,
       image: product.image
     });
     this.editProductID = product.id as number;

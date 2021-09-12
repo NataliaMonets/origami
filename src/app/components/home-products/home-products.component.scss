@@ -1,0 +1,121 @@
+@import '../../shared/style/fonts.scss';
+
+.site-content {
+  display: flex;
+}
+
+.discr-item {
+  width: 380px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  h3 {
+    color: #11c459;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-family: 'FuturaMediumC';
+  }
+
+  p {
+    width: 310px;
+    text-align: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 17px;
+    margin: 0 auto 10px;
+    font-family: 'FuturaBookC';
+  }
+
+  a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    text-decoration: none;
+    color: #11c459;
+  }
+
+  img {
+    margin: auto;
+  }
+}
+
+.price-sushi-rolls-pizza {
+  margin-right: 2px;
+  font-size: 25px;
+  font-family: 'FuturaMediumC';
+}
+
+.weight {
+  font-family: 'FuturaBookC';
+  font-size: 18px;
+  line-height: 1.3em;
+  margin-top: 3px;
+}
+
+.detailes {
+  text-align: center;
+}
+
+.prodCount {
+  margin-top: 25px;
+  font-size: 26px;
+  font-family: 'FuturaMediumC';
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    border: none;
+    background-color: transparent;
+    font-size: 26px;
+  }
+
+  input {
+    font-family: 'FuturaMediumC';
+    font-size: 26px;
+    width: 56px;
+    border: none;
+    outline: none;
+    text-align: center;
+  }
+}
+
+.order {
+  width: 130px;
+  margin: 10px auto 0;
+  color: #fff;
+  background: #fe4c2b;
+  font-size: 19px;
+  padding: 13px 10px 12px !important;
+  border: #fe4c2b;
+  outline: none;
+  text-align: center;
+}
+
+.titleColor {
+  color: #fe4c2b !important;
+}
+
+.sale-wrapper {
+  width: 163px;
+  height: 30px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 40px;
+  left: 135px;
+  width: 100%;
+  background: #fe4c2b;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'FuturaBookC';
+}
