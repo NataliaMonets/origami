@@ -1,7 +1,5 @@
 <div class="site-content">
-  <h1 [ngClass]="{'h1Width': currentCategory == 'Піца'}" [ngClass]="{'h1Width': currentCategory == 'Суші сети'}"
-    [ngClass]="{'h1Width3': currentCategory == 'Десерти'}" [ngClass]="{'h1Width2': currentCategory == 'Супи, салати'}">
-    {{ currentCategory | uppercase }} <span *ngIf="currentCategory == 'Піца'">ЛЬВІВ</span></h1>
+  <h1><span>{{ currentCategory | uppercase }} <span *ngIf="currentCategory == 'Піца'">ЛЬВІВ</span></span></h1>
   <div class="items">
     <div *ngIf="currentCategory =='Піца'" class="description">
       <div class="descrip">

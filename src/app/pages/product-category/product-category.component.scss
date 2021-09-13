@@ -1,17 +1,5 @@
 @import '../../shared/style/fonts.scss';
 
-.h1Width {
-  width: 150px;
-}
-
-.h1Width2 {
-  width: 210px;
-}
-
-.h1Width3 {
-  width: 120px;
-}
-
 .site-content {
   width: 100%;
 }
@@ -24,15 +12,18 @@
 }
 
 h1 {
-  border-bottom: 5px solid #fe4c2b;
-  margin: 20px auto 10px;
-  font-size: 30px;
-  width: 90px;
-  font-family: 'FuturaMediumC';
-  font-weight: 500;
-  line-height: 1.1;
-  padding: 20px 0 2px;
   text-align: center;
+  margin: 20px auto 10px;
+  padding: 20px 0 2px;
+
+  span {
+    border-bottom: 5px solid #fe4c2b;
+    font-size: 30px;
+    font-family: 'FuturaMediumC';
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: center;
+  }
 }
 
 .discr-item {

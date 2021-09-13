@@ -1,19 +1,38 @@
-<div>
-  <div class="row">
-    <div>
-      <img [src]="product?.image" class="card-img-top">
-      <div class="card-body text-center">
-        <h4 class="card-title mb-5">{{product?.title}}</h4>
-        <p>{{product?.description}}</p>
-        <div><span class="price-sushi-rolls-pizza">{{product.price * product.count}} грн</span><span
-            class="weight">{{product.weight}}</span></div>
-        <div>
-          <button (click)="countProduct(product, false)">-</button>
-          <input type="text" [(ngModel)]="product.count">
-          <button (click)="countProduct(product, true)">+</button>
+<div class="site-content">
+  <div class="way">
+    <a [routerLink]="['']">Головна</a>
+    <span>/</span>
+    <a *ngIf="product.category.name !== 'Акції'" [routerLink]="['/products-category']"> {{product.category.name}}</a>
+    <a *ngIf="product.category.name == 'Акції'" [routerLink]="['/']" routerLinkActive="active"> {{product.category.name}}</a>
+    <span>/</span>
+    <a [routerLink]="['/products-category/'+product.category.path, product.id]"> {{product.title | titlecase}}</a>
+  </div>
+  <div class="page-content">
+    <h1><span>{{product.title}}</span></h1>
+    <div class="container">
+      <div class="row">
+        <div class="item-img">
+          <img [src]="product?.image" class="card-img-top">
+          <div class="detailes"><span class="price-sushi-rolls-pizza">{{product.price * product.count}} грн</span><span
+              class="weight">{{product.weight}}</span></div>
+          <button class="order" (click)="addToCart(product)">ЗАМОВИТИ</button>
         </div>
-        <button class="order" (click)="addToCart(product)">ЗАМОВИТИ</button>
+        <div class="card-body">
+          <p>{{product?.description}}</p>
+          <hr>
+          <div class="prodCount">
+            <button (click)="countProduct(product, false)"><i class="uil uil-minus"></i></button>
+            <input type="text" [(ngModel)]="product.count">
+            <button (click)="countProduct(product, true)"><i class="uil uil-plus"></i></button>
+          </div>
+        </div>
       </div>
+      <p class="someText">
+        Швидка та безкоштовна доставка <a [routerLink]="[ '/product-category', 'pizza' ]">піца Львів</a> додому чи в
+        офіс. Замовити піцу Домашня онлайн швидко та зручно.
+        Доставка піци Львів — страви ресторанної якості у вас вдома.
+      </p>
     </div>
+    <button [routerLink]="['']" class="backToHome">НАЗАД ДО КАТАЛОГУ</button>
   </div>
 </div>
