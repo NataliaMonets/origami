@@ -16,6 +16,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminCategoryComponent } from './admin/admin-category/admin-category.component';
 import { AdminProductComponent } from './admin/admin-product/admin-product.component';
 import { AdminOrderComponent } from './admin/admin-order/admin-order.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'sertifikati', component: SertifikatiComponent },
   { path: 'vidguki', component: VidgukiComponent },
   { path: 'cart', component: CartComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'hits', component: HitsComponent },
   { path: 'admin', component: AdminComponent, children: [

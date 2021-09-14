@@ -35,7 +35,7 @@ export class CartComponent implements OnInit {
       userCity: [null, Validators.required],
       userStreet: [null, Validators.required],
       userHouse: [null, Validators.required],
-      userFlat: [null, Validators.required],
+      userFlat: [null],
       userComment: [null]
     })
   }
@@ -88,13 +88,16 @@ export class CartComponent implements OnInit {
         this.orderForm.reset();
       }, err => {
         console.log(err);
-
       }
     )
   }
 
   preOrder(): void {
     this.showPreOrder = !this.showPreOrder;
+  }
+
+  checkUserLogin(): void {
+
   }
 
 }

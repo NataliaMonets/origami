@@ -30,8 +30,8 @@ import { HomeProductsComponent } from './components/home-products/home-products.
 
 import { environment } from '../environments/environment';
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
-// import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+import { LoginComponent } from './pages/login/login.component';
 
 
 @NgModule({
@@ -55,6 +55,7 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     VidgukiComponent,
     YakZamovitiComponent,
     HomeProductsComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

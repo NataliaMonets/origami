@@ -608,6 +608,37 @@
       ],
       "totalPrice": 825,
       "id": 4
+    },
+    {
+      "userName": null,
+      "userPhone": null,
+      "userEmail": null,
+      "userCity": null,
+      "userStreet": null,
+      "userHouse": null,
+      "userFlat": null,
+      "userComment": null,
+      "products": [
+        {
+          "category": {
+            "name": "Піца",
+            "path": "pizza",
+            "icon": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+            "id": 1
+          },
+          "title": "ПІЦА ДИТЯЧА",
+          "description": "куряче філе, помідор, кукурудза, моцарела, пармезан, спеції, соус",
+          "path": "dityacha",
+          "price": "149",
+          "weight": "500 г",
+          "discount": "true",
+          "image": "https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg",
+          "count": 1,
+          "id": 17
+        }
+      ],
+      "totalPrice": 149,
+      "id": 5
     }
   ]
 }

@@ -273,6 +273,10 @@ form {
   border: none;
 }
 
+.add-order:disabled {
+  background-color: grey;
+}
+
 .return {
   background-color: #11c459;
   height: 45px;

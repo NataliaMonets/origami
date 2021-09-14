@@ -54,11 +54,11 @@
           <input type="text" name="" id="" placeholder="Дата">
           <input type="text" name="" id="" placeholder="00:00">
         </div>
-        <button (click)="addOrder()" *ngIf="totalPrice > 149" class="add-order">ОФОРМИТИ</button>
+        <button [disabled]="orderForm.invalid" (click)="addOrder()" *ngIf="totalPrice > 148" class="add-order">ОФОРМИТИ</button>
       </form>
     </div>
     <div class="right-container">
-      <div class="minSum" *ngIf="!(totalPrice > 149)">
+      <div class="minSum" *ngIf="!(totalPrice > 148)">
         <p>Мінімальна сума замовлення — 149 грн.</p>
       </div>
       <div *ngIf="!cart.length">
