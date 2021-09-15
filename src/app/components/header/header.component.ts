@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IProduct } from 'src/app/shared/models/product/product.model';
 import { OrderService } from 'src/app/shared/services/order/order.service';
 
@@ -7,7 +7,7 @@ import { OrderService } from 'src/app/shared/services/order/order.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
 
   isShow = true;
   public totalPrice: number = 0;
@@ -21,6 +21,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.loadCart();
     this.updateCart();
+  }
+
+  ngOnDestroy(): void {
+    this.orderService.changeCart$.unsubscribe();
   }
 
   showNav(): void {

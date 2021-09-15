@@ -4,6 +4,10 @@
   color: #999;
 }
 
+.close {
+  display: none;
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -119,7 +123,6 @@ a[tabindex]:focus {
   grid-column: 2/3;
   grid-row: 2/3;
   display: flex;
-  height: 60px;
   justify-content: space-between;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
@@ -238,6 +241,10 @@ a[tabindex]:focus {
     display: none;
   }
 
+  .close {
+    display: block;
+  }
+
   .row {
     width: 100%;
     height: 50px;
@@ -259,13 +266,13 @@ a[tabindex]:focus {
 
   .header {
     z-index: 9999;
-    position: fixed;
-    top: 50px;
-    left: 0;
+    position: relative;
     background-color: white;
     box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
     height: 833px;
-    width: 731px;
+    width: calc(100% - 60px);
+    padding: 0 30px;
+    top: -50px;
   }
 
   .cart {
@@ -290,13 +297,13 @@ a[tabindex]:focus {
     list-style: none;
     font-family: 'FuturaMediumC';
     font-size: 18px;
-    width: 645px;
+    width: 100%;
     margin: 7px auto 0;
     flex-wrap: wrap;
     text-align: center;
 
     li {
-      width: 215px;
+      width: 33.3%;
       display: flex;
       flex-direction: column;
     }
@@ -335,7 +342,6 @@ a[tabindex]:focus {
     grid-column: 1/2;
     grid-row: 2/3;
     display: block;
-    height: 84px;
     border-top: none;
     font-size: 20px;
 
@@ -350,7 +356,31 @@ a[tabindex]:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 440px;
+    width: 100%;
     height: 60px;
+  }
+}
+
+@media (max-width: 440px){
+  .info {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 30px 0;
+  }
+
+  .header-main {
+    grid-template-rows: 44px 150px 96px;
+  }
+
+  .menu {
+    li {
+      margin-bottom: 20px;
+    }
   }
 }

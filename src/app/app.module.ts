@@ -33,7 +33,6 @@ import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { LoginComponent } from './pages/login/login.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

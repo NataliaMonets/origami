@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { getStorage, ref, uploadBytes, uploadString } from '@angular/fire/storage';
+import { getDownloadURL, getStorage, ref, uploadBytes, uploadString } from '@angular/fire/storage';
 import { FirebaseApp, FirebaseApps } from '@angular/fire/app';
 import { Storage, StorageInstances } from '@angular/fire/storage';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -17,7 +17,7 @@ import { ProductService } from 'src/app/shared/services/product/product.service'
 })
 export class AdminProductComponent implements OnInit {
 
-  public adminCategories : Array<ICategory> = [];
+  public adminCategories: Array<ICategory> = [];
   public adminProducts: Array<IProduct> = [];
   public productForm!: FormGroup;
   public customImage = 'https://origami.lviv.ua/image/vmmcrksfcd/marharyta-small.jpg';
@@ -26,12 +26,17 @@ export class AdminProductComponent implements OnInit {
   public uploadPercent: Observable<number> | undefined | null;
   public image: string = '';
   public imageStatus: boolean = false;
+  public imageUrl!: any;
 
   constructor(
     private categoryService: CategoryService,
     private productService: ProductService,
     private toastr: ToastrService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    defaultApp: FirebaseApp,       // Injects the default FirebaseApp
+    allFirebaseApps: FirebaseApps, // Injects an array of all initialized Firebase Apps
+    storage: Storage,                      // Injects the default storage instance
+    allStorageInstances: StorageInstances,
   ) { }
 
   ngOnInit(): void {
@@ -126,14 +131,22 @@ export class AdminProductComponent implements OnInit {
     this.imageStatus = false;
   }
 
-  uploadFile(event: any): void {
-    const file = event.target.files[0];
-    const filePath = `images/${file.name}`;
-    const storage = getStorage();
-    const storageRef = ref(storage, filePath);
-    uploadBytes(storageRef, file).then((snapshot) => {
-      console.log('Uploaded a blob or file');
-      console.log(snapshot);
-    })
-  }
+  // uploadFile(event: any): void {
+  //   const file = event.target.files[0];
+  //   const filePath = `images/${file.name}`;
+  //   const storage = getStorage();
+  //   const storageRef = ref(storage, filePath);
+    
+
+  //   const task = uploadBytes(storageRef, file);
+  //       task.then((snapshot) => {
+  //           getDownloadURL(ref(storage, filePath)).then(img => {
+  //               this.image = img;
+  //               this.productForm.patchValue({
+  //                   image: this.image
+  //               })
+  //               console.log(this.image);
+  //           })
+  //       })
+  // }
 }
