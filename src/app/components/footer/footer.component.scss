@@ -193,7 +193,6 @@ hr {
   .menu {
     grid-column: 1/2;
     grid-row: 1/2;
-    width: 195px;
     padding: 0 15px;
   
     li {
@@ -216,7 +215,6 @@ hr {
   
   .about {
     margin: 0 15px;
-    width: 262.5px;
     grid-column: 2/3;
     grid-row: 1/2;
   
@@ -240,7 +238,6 @@ hr {
   
   .contacts {
     padding: 0 15px;
-    width: 292.5px;
     grid-column: 2/3;
     grid-row: 2/3;
   
@@ -270,7 +267,6 @@ hr {
   }
   
   .info {
-    width: 165px;
     margin: 0 15px 0 0;
     grid-column: 1/2;
     grid-row: 2/3;
@@ -292,5 +288,21 @@ hr {
     img {
       margin-bottom: 15px;
     }
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    height: 602px;
+    height: 1107px;
+  }
+
+  .info {
+    padding: 15px 15px 0;
   }
 }
