@@ -1,104 +1,287 @@
 @import '../../shared/style/fonts.scss';
 
 .site-content {
-    width: 1200px;
-    margin: auto;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
 }
 
 h2 {
-    width: 300px;
-    display: flex;
-    margin: 14px auto 19px;
-    justify-content: center;
-    
+  display: flex;
+  margin: 14px auto 19px;
+  justify-content: center;
+
 }
 
 span {
-    width: 112px;
-    font-size: 20px;
-    text-align: left;
-    font-family: 'FuturaMediumC';
-    font-weight: 500;
+  width: 112px;
+  font-size: 20px;
+  text-align: left;
+  font-family: 'FuturaMediumC';
+  font-weight: 500;
 }
 
 .num {
-    font-size: 50px;
-    width: 36.41px;
-    font-family: 'FuturaMediumC';
+  font-size: 50px;
+  width: 36.41px;
+  font-family: 'FuturaMediumC';
 }
 
 .howToOrder {
-    display: grid;
-    grid-template-columns: 4fr;
-    margin: 54px 0 43px;
-    position: relative;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 54px 0 43px;
+  position: relative;
 
-    p {
-        border: 1px solid #bebebe;
-        border-top: 4px solid #11c459;
-        height: 100%;
-        line-height: 22px;
-        height: 164px;
-        width: 270px;
-        padding: 15px 5px 5px;
-        margin: 0 auto;
-        font-size: 18px;
-        font-family: 'FuturaBookC';
-    }
+  p {
+    border: 1px solid #bebebe;
+    border-top: 4px solid #11c459;
+    height: 100%;
+    line-height: 22px;
+    height: 164px;
+    max-width: 270px;
+    padding: 15px 5px 5px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-family: 'FuturaBookC';
+  }
 }
 
 .step1 {
-    grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 1/2;
 }
 
 .step2 {
-    grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 2/3;
 }
 
 .step3 {
-    grid-column: 3/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 3/4;
 }
 
 .step4 {
-    grid-column: 4/5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 4/5;
 }
 
 h1 {
-    padding-bottom: 2px;
-    margin: 40px auto;
-    border-bottom: 5px solid #fe4c2b;
-    font-size: 30px;
-    width: 198px;
-    font-family: 'FuturaMediumC';
-    font-weight: 500;
-    line-height: 1.1;
+  padding-bottom: 2px;
+  margin: 40px auto;
+  border-bottom: 5px solid #fe4c2b;
+  font-size: 30px;
+  width: 198px;
+  font-family: 'FuturaMediumC';
+  font-weight: 500;
+  line-height: 1.1;
 }
 
 p {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 22px;
-    font-family: 'FuturaBookC';
-}
-
-img {
-    margin: 0 80px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 22px;
+  font-family: 'FuturaBookC';
 }
 
 .arr1 {
-    position: absolute;
-    top: 40px;
-    left: 160px;
+  width: 113px;
+  position: absolute;
+  top: 40px;
+  left: 240px;
 }
 
 .arr2 {
-    position: absolute;
-    top: 40px;
-    left: 470px;
+  width: 113px;
+  position: absolute;
+  top: 40px;
+  right: 530px;
 }
 
 .arr3 {
-    position: absolute;
-    top: 40px;
-    right: 150px;
+  width: 113px;
+  position: absolute;
+  top: 40px;
+  right: 230px;
+}
+
+
+@media (max-width: 1200px) {
+  .site-content {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .howToOrder {
+    column-gap: 10px;
+
+    p {
+      height: 230px;
+    }
+  }
+
+  .arr1 {
+    width: 70px;
+    left: 200px;
+  }
+
+  .arr2 {
+    width: 70px;
+    right: 450px;
+  }
+
+  .arr3 {
+    width: 70px;
+    right: 190px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .site-content {
+    max-width: 690px;
+    padding: 0;
+  }
+
+  .howToOrder {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    column-gap: 0;
+  }
+
+  .howToOrder {
+      padding: 0 45px;
+    p {
+      max-width: 315px;
+      min-width: 242.5px;
+      height: 186px;
+      margin: 0 15px;
+    }
+  }
+
+  .arr1 {
+    width: 113px;
+    left: 290px;
+  }
+
+  .arr2 {
+    width: 113px;
+    right: -20px;
+    top: 380px;
+    transform: rotate(95deg);
+  }
+
+  .arr3 {
+    width: 113px;
+    top: 470px;
+    left: 290px;
+  }
+
+  .step1 {
+    grid-column: 1/2;
+  }
+
+  .step2 {
+    grid-column: 2/3;
+  }
+
+  .step3 {
+    margin-top: 43px;
+    grid-column: 1/2;
+  }
+
+  .step4 {
+    margin-top: 43px;
+    grid-column: 2/3;
+  }
+}
+
+@media (max-width: 605px) {
+    .site-content {
+        max-width: 536px;
+      }
+    
+      .howToOrder {
+        grid-template-columns: 1fr;
+      }
+    
+      .howToOrder {
+          padding: 0 45px;
+        p {
+          max-width: 506px;
+          min-width: 0;
+          min-height: 120px;
+          margin: 0 15px;
+        }
+      }
+    
+      .arr1 {
+        top: 380px;
+        left: -20px;
+        transform: rotate(85deg);
+      }
+    
+      .arr2 {
+        right: -20px;
+        top: 810px;
+        transform: rotate(95deg);
+      }
+    
+      .arr3 {
+        top: 1250px;
+        left: -20px;
+        transform: rotate(85deg);
+      }
+    
+      .step1 {
+        grid-column: 1/2;
+      }
+    
+      .step2 {
+        margin-top: 43px;
+        grid-column: 1/2;
+      }
+    
+      .step3 {
+        margin-top: 43px;
+        grid-column: 1/2;
+      }
+    
+      .step4 {
+        margin-top: 43px;
+        grid-column: 1/2;
+      }
+}
+
+@media (max-width: 360px) {
+    .howToOrder {
+      p {
+        width: 172px;
+        height: 296px;
+      }
+    }
+
+    .arr1 {
+        top: 500px;
+        left: 0px;
+      }
+    
+      .arr2 {
+        right: 0;
+        top: 1050px;
+      }
+    
+      .arr3 {
+        top: 1580px;
+        left: 0;
+      }
 }

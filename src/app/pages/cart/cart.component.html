@@ -67,7 +67,7 @@
       </div>
       <div *ngIf="cart.length">
         <div *ngFor="let order of cart" class="prodOrder">
-          <a href=""><img [src]="order.image" alt="" [style.width]="'102px'"></a>
+          <a href=""><img [src]="order.image" class="orderImg"></a>
           <div class="prodOrderRight">
             <div class="prodOrderTop">
               <a href="">{{order.title | titlecase}}</a>

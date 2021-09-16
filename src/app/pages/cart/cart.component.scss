@@ -2,7 +2,7 @@
 
 .page-content {
   display: grid;
-  grid-template-columns: 2fr;
+  grid-template-columns: repeat(2, 1fr);
   margin: auto;
   max-width: 1170px;
   margin-bottom: 30px;
@@ -94,7 +94,7 @@ form {
 }
 
 .minSum {
-  width: 525px;
+  width: 100%;
   border-top-color: #b81c23;
   padding: 1em 2em 1em 3.5em;
   margin: 0 0 2em;
@@ -196,7 +196,7 @@ form {
 }
 
 .prodOrder {
-  width: 525px;
+  width: 100%;
   display: flex;
   padding: 15px 1.25% 21px;
   border-bottom: 1px solid #e5e5e5;
@@ -292,5 +292,79 @@ form {
     color: #fff;
     font-family: 'FuturaMediumC';
     font-size: 17px;
+  }
+}
+
+.orderImg {
+  max-width: 102px;
+}
+
+@media (max-width: 1000px) {
+  .page-content {
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 359px auto;
+    max-width: 750px;
+  }
+
+  .left-container {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    border-right: none;
+  }
+
+  .right-container {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+}
+
+@media (max-width: 500px) {
+  .radio-div {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .page-content {
+    grid-template-rows: 437px auto;
+    max-width: 308px;
+  }
+
+  .orderImg {
+    max-width: 54px;
+  }
+
+  .prodOrderRight {
+    width: 100%;
+  }
+
+  .prodOrderBottom {
+    font-size: 22px;
+  
+    button {
+      font-size: 22px;
+    }
+
+    input {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: 330px) {
+
+  .page-content {
+    grid-template-rows: 437px auto;
+    max-width: 260px;
+  }
+
+  .left-container {
+    width: 260px;
+    padding: 30px 0;
+  }
+
+  .right-container {
+    padding: 30px 0;
   }
 }

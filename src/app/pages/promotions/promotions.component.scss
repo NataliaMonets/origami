@@ -1,9 +1,10 @@
 @import '../../shared/style/fonts.scss';
 
 .site-content {
-  width: 1140px;
+  max-width: 1140px;
   margin: 20px auto 15px;
   font-family: 'FuturaMediumC';
+  padding: 0 10px;
 }
 
 h1 {
@@ -11,7 +12,7 @@ h1 {
   padding-bottom: 2px;
   border-bottom: 5px solid #fe4c2b;
   font-size: 30px;
-  width: 72.78px;
+  max-width: 72.78px;
   margin: 20px auto 10px;
   font-weight: 500;
   line-height: 1.1;
@@ -27,4 +28,5 @@ h3 {
 
 img {
   margin: 25px 0;
+  width: 100%;
 }

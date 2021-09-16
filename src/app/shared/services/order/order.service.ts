@@ -29,6 +29,10 @@ export class OrderService {
     return this.http.post<any>(this.api.orders, order);
   }
 
+  delete(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.api.orders}/${id}`);
+  }
+
   addToCart(product: IProduct): void {
     let cart: Array<IProduct> = [];
     if(localStorage.getItem('cart')){

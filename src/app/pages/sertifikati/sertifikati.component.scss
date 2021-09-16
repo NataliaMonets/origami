@@ -2,7 +2,7 @@
 
 .site-content {
   margin: auto;
-  width: 900px;
+  max-width: 900px;
 }
 
 .sertif {
@@ -11,6 +11,12 @@
   display: grid;
   grid-template-columns: 2fr;
   grid-template-rows: 6fr;
+  padding: 0 15px;
+
+  img {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 .photo1 {
@@ -88,7 +94,7 @@ h1 {
 @media (max-width: 1200px) {
   .site-content {
     margin: auto;
-    width: 450px;
+    max-width: 450px;
   }
 
   .sertif {

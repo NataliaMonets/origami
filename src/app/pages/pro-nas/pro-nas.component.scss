@@ -1,51 +1,51 @@
 @import '../../shared/style/fonts.scss';
 
 .site-content {
-    margin: auto;
-    max-width: 975px;
-    padding: 0 15px;
+  margin: auto;
+  max-width: 975px;
+  padding: 0 15px;
 }
 
 p {
-    text-align: justify;
-    margin-bottom: 43px;
-    font-size: 18px;
+  text-align: justify;
+  margin-bottom: 43px;
+  font-size: 18px;
 }
 
 h1 {
-    border-bottom: 5px solid #fe4c2b;
-    margin: 20px auto 10px;
-    font-size: 30px;
-    width: 121.48px;
-    font-family: 'FuturaMediumC';
-    font-weight: 500;
-    line-height: 1.1;
-    padding: 20px 0 2px;
+  border-bottom: 5px solid #fe4c2b;
+  margin: 20px auto 10px;
+  font-size: 30px;
+  width: 121.48px;
+  font-family: 'FuturaMediumC';
+  font-weight: 500;
+  line-height: 1.1;
+  padding: 20px 0 2px;
 }
 
 a {
-    color: #337ab7;
+  color: #337ab7;
 }
 
 .article {
-    margin: 30px 0;
-    font-family: 'FuturaBookC';
+  margin: 30px 0;
+  font-family: 'FuturaBookC';
 }
 
 @media (max-width: 1200px) {
-    .site-content {
-        max-width: 808px;
-    }
+  .site-content {
+    max-width: 808px;
+  }
 }
 
 @media (max-width: 1000px) {
-    .site-content {
-        max-width: 750px;
-    }
+  .site-content {
+    max-width: 750px;
+  }
 }
 
 @media (max-width: 800px) {
-    .site-content {
-        max-width: 765px;
-    }
+  .site-content {
+    max-width: 765px;
+  }
 }

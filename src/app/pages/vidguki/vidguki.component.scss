@@ -1,7 +1,7 @@
 @import '../../shared/style/fonts.scss';
 
 .site-content {
-  width: 945px;
+  max-width: 945px;
   margin: auto;
 }
 
@@ -40,6 +40,7 @@ section {
   padding: 30px 0 20px;
   display: flex;
   flex-direction: column;
+  padding: 0 15px;
 
   p {
     font-weight: 700;
@@ -81,8 +82,14 @@ section {
 
 .review-item {
   list-style: none;
-  width: 945px;
+  max-width: 945px;
   height: 106px;
   background-color: #f7f7f6;
   margin-bottom: 20px;
+}
+
+@media (max-width: 330px) {
+  .p-container {
+    max-width: 290px;
+  }
 }

@@ -1,39 +1,72 @@
 @import '../shared/style/fonts.scss';
 
 .site-content {
-    display: grid;
-    grid-template-columns: 100px 4fr;
-    width: 1000px;
-    margin: auto;
-    padding: 50px 0;
+  display: grid;
+  grid-template-columns: 100px auto;
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 15px;
 }
 
 .admin-components {
-    display: flex;
-    flex-direction: column;
-    grid-column: 1/2;
-    margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/2;
+  margin-right: 10px;
 }
 
 .content {
-    grid-column: 2/6;
+  grid-column: 2/3;
 }
 
 .link-cat {
-    width: 100%;
-    height: 40px;
-    color: black;
-    font-family: 'FuturaMediumC';
-    font-size: 18px;
-    margin-bottom: 20px;
-    background-color: transparent;
-    border: none;
+  width: 100%;
+  height: 40px;
+  color: black;
+  font-family: 'FuturaMediumC';
+  font-size: 18px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: none;
 }
 
 .active {
-    border-radius: 5%;
-    outline: none;
-    border: 1px solid rgb(73, 154, 247);
-    background-color: rgb(73, 154, 247);
-    color: white;
+  border-radius: 5%;
+  outline: none;
+  border: 1px solid rgb(73, 154, 247);
+  background-color: rgb(73, 154, 247);
+  color: white;
+}
+
+@media (max-width: 870px) {
+  .site-content {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+  }
+
+  .content {
+    grid-column: 1/2;
+  }
+
+  .admin-components {
+    margin: 0;
+  }
+}
+
+@media (max-width: 370px) {
+  .site-content {
+    width: 310px;
+    padding: 50px 5px;
+    margin: auto;
+  }
+
+  .admin-components {
+    width: 310px;
+  }
+}
+
+@media (max-width: 325px) {
+  .site-content {
+    padding: 50px 5px;
+  }
 }

@@ -1,1 +1,30 @@
-<p>admin-order works!</p>
+<div class="site-content">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">City/Street/House/Flat</th>
+                <th scope="col">Price</th>
+                <th scope="col">Product</th>
+                <th scope="col">Count</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of adminOrder; index as i">
+                <td>{{ i + 1 }}</td>
+                <td>{{ order.userName }}</td>
+                <td>{{ order.userPhone }}</td>
+                <td>{{ order.userCity }} / {{ order.userStreet }} / {{ order.userHouse }} / {{ order.userFlat}}</td>
+                <td>{{ order.totalPrice }} Грн</td>
+                <td><li *ngFor="let item of order.products">{{ item.title }}</li></td>
+                <td><li *ngFor="let item of order.products">{{ item.count }}</li></td>
+                <td>
+                    <button class="delete" (click)="deleteOrder(order)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

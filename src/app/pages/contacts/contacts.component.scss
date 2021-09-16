@@ -1,9 +1,10 @@
 @import '../../shared/style/fonts.scss';
 
 .site-content {
-  width: 970px;
+  max-width: 970px;
   margin: 0 auto 67px;
   font-family: 'FuturaBookC';
+  padding: 0 15px;
 }
 
 .contacts {
