@@ -5,7 +5,7 @@
 }
 
 .discr-item {
-  width: 380px;
+  max-width: 380px;
   padding: 0 15px;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@
   }
 
   p {
-    width: 310px;
+    max-width: 310px;
     text-align: center;
     padding-bottom: 12px;
     border-bottom: 1px solid #e0e0e0;
@@ -118,4 +118,29 @@
   justify-content: center;
   align-items: center;
   font-family: 'FuturaBookC';
+}
+
+.prod-img {
+  max-width: 298.56px;
+}
+
+@media (max-width: 1000px) {
+  .sale-wrapper {
+    top: 30px;
+    left: 115px;
+  }
+
+  .site-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .discr-item {
+    max-width: 310px;
+    margin-bottom: 90px;
+  }
+
+  .prod-img {
+    max-width: 275px;
+  }
 }

@@ -63,10 +63,11 @@ h1 {
     text-decoration: none;
     color: #11c459;
   }
+}
 
-  img {
-    margin: auto;
-  }
+.prod-img {
+  width: 360px;
+  margin: auto;
 }
 
 .price-sushi-rolls-pizza {
@@ -157,6 +158,7 @@ h1 {
   width: 33.3%;
   margin: 5px 0 25px;
   font-size: 20px;
+  padding: 0 15px;
 
   img {
     margin-right: 13px;
@@ -167,7 +169,7 @@ h1 {
   width: 100%;
   height: 346px;
   overflow-y: scroll;
-  margin: 50px 0 !important;
+  margin: 50px 0;
   border-top: 3px solid #11c459;
   padding: 35px 0;
 
@@ -217,5 +219,98 @@ h1 {
     font-family: 'FuturaBookC';
     font-size: 18px;
     line-height: 1.3em;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .items {
+    max-width: 750px;
+  }
+
+  .discr-item {
+    width: 50%;
+  }
+
+  .prod-img {
+    max-width: 345px;
+  }
+
+  .description {
+    flex-direction: column;
+  }
+
+  .descrip {
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .items {
+    max-width: 750px;
+  }
+
+  .discr-item {
+    width: 100%;
+  }
+
+  .prod-img {
+    max-width: 368px;
+  }
+
+  .description {
+    flex-direction: column;
+  }
+
+  .descrip {
+    width: 100%;
+  }
+
+  .cat-description {
+    margin: 50px 15px;
+  }
+}
+
+@media (max-width: 390px) {
+  .discr-item {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 3fr;
+    padding: 90px 0;
+    margin: 0 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+
+    h3 {
+      grid-column: 2/3;
+      grid-row: 1/2;
+
+      a {
+        color: black;
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      width: 100%;
+      grid-column: 2/3;
+      grid-row: 2/3;
+      text-align: center;
+      font-size: 16px;
+      margin: 0;
+      padding: 0 0 12px;
+      color: #999;
+    }
+  }
+
+  .prod-img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 94px;
+  }
+
+  .prodCount {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: 0;
   }
 }

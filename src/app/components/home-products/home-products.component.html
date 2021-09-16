@@ -2,7 +2,7 @@
   <div class="discr-item" *ngFor="let homeprod of userProduct">
     <div class="sale-wrapper" *ngIf="homeprod.category.path == 'discounts'">-20%</div>
       <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"><img class="prod-img"
-          [src]="homeprod.image" alt="" [style.width]="'298.56px'"></a>
+          [src]="homeprod.image"></a>
       <h3>
         <a [routerLink]="['/products-category/'+homeprod.category.path, homeprod.id]"
           routerLinkActive="router-link-active" [ngClass]="{'titleColor': homeprod.category.path == 'pizza'}">{{homeprod.title}}</a>

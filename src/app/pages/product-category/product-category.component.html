@@ -44,8 +44,7 @@
       </div>
     </div>
     <div class="discr-item" *ngFor="let prod of userProduct">
-      <a [routerLink]="['/products-category/'+prod.category.path, prod.id]"><img class="prod-img" [src]="prod.image"
-          alt="" [style.width]="'298.56px'"></a>
+      <a [routerLink]="['/products-category/'+prod.category.path, prod.id]"><img class="prod-img" [src]="prod.image"></a>
       <h3>
         <a [routerLink]="['/products-category/'+prod.category.path, prod.id]"
           routerLinkActive="router-link-active">{{prod.title}}</a>
